@@ -1,0 +1,18 @@
+<article>
+  <h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
+  <time class="date" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</time>
+  <ul class="meta">
+    <li class="category">
+      <ul>
+      {% for cat in page.categories %}
+        <li><span>{{ cat }}</span></li>
+      {% endfor %}
+      </ul>
+    </li>
+    <li class="author"><span><img src="http://www.gravatar.com/avatar/{{ site.authors[page.author].gravatar }}?s=50" width="50" alt="">{{ page.author }}</span></li>
+  </ul>
+
+  <div class="textbody">
+      {% if content %}{{ content }}{% else %}{{ page.content }}{% endif %}
+  </div>
+</article>

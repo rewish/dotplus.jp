@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>.coder : 簡単なtooltipをjQueryで作成</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script type="text/javascript" language="javascript" src="js/lib/jquery.js"></script>
+<script type="text/javascript" language="javascript" src="js/setting.js"></script>
+<script type="text/javascript">
+$(function(){
+	//各tooltipクラスの動作設定
+	$(".tooltip").each(function(){
+		var content = $(".tooltipCont" , this);
+
+		//mousemoveイベントの動作設定
+		$(this).mousemove(function(event){
+			$(content).css({
+				top : event.pageY + 15,
+				left : event.pageX + 15
+			});
+		});
+		
+		//hoverイベントの動作設定
+		$(this).hover(function(){
+			$(content).stop(true , true).fadeIn(300);
+		}, function(){
+			$(content).css("display" , "none");
+		});
+
+	});
+
+	$(".tooltip02").each(function(){
+		var content02 = $(".tooltip02Cont" , this);
+
+		$("input" , this).focus(function(){
+			$(content02).css({
+				top : 30,
+				left : 30
+			});
+			$(content02).stop(true , true).fadeIn(300);
+		});
+		
+		$("input" , this).blur(function(){
+			$(content02).css("display" , "none");
+		});
+
+	});
+
+	$(".tooltip03").each(function(){
+		var content03 = $(".tooltip03Cont" , this);
+
+		$(" > a" , this).hover(function(){
+			$(content03).css({
+				top : 15,
+				left : 0
+			});
+			$(content03).stop(true , true).fadeIn(300);
+		}, function(){
+			$(content03).css("display" , "none");
+		});
+		
+		$(content03).hover(function(){
+			$(this).css("display" , "block");
+		}, function(){
+			$(this).css("display" , "none");
+		});
+
+	});
+
+});
+</script>
+<style type="text/css">
+.tooltipCont {
+	display: none;
+	position: absolute;
+	z-index: 100;
+	padding: .5em;
+	background: #cef3ff;
+	-moz-border-radius: 5px;
+	-webkit-border-top: 5px;
+	font-size: 80%;
+	color: #000;
+	text-decoration: none;
+}
+.tooltip02Cont {
+	display: none;
+	position: absolute;
+	z-index: 100;
+	padding: .5em;
+	background: #cef3ff;
+	-moz-border-radius: 5px;
+	-webkit-border-top: 5px;
+	font-size: 80%;
+	color: #000;
+	text-decoration: none;
+}
+.tooltip03Cont {
+	display: none;
+	position: absolute;
+	z-index: 100;
+	padding: .5em;
+	background: #cef3ff;
+	-moz-border-radius: 5px;
+	-webkit-border-top: 5px;
+	font-size: 80%;
+	color: #000;
+	text-decoration: none;
+}
+.tooltip03Cont a {
+	padding-right: .3em;
+}
+
+</style>
+</head>
+
+<body>
+
+	<div id="header">
+		<h1>.coder : 簡単なtooltipをjQueryで作成</h1>
+	</div>
+	
+	<div id="contents">
+		<div id="index">
+			<p class="indexTitle">.coder : 簡単なtooltipをjQueryで作成</p>
+		</div>
+		
+		<div class="section">
+			<h2>完成形</h2>
+			<p>まずは完成形をご覧下さい。<br />簡単なtooltipですので、特にすごいエフェクトもございません。</p>
+			
+			<div class="demo">
+				<p>　エジプトのピラミッド、ハリカリナッソスのマウソレイオン霊廟、オリンピアのゼウス像、アレクサンドリアのファロス島の灯台、ロドス島のアポロンの巨像、エフェソスのアルテミス神殿、そしてバビロンの空中庭園。この七つの遺跡が「<a class="tooltip" href="http://ja.wikipedia.org/wiki/%E4%B8%96%E7%95%8C%E3%81%AE%E4%B8%83%E4%B8%8D%E6%80%9D%E8%AD%B0">世界七不思議<span class="tooltipCont">古典古代（古代ギリシャ・古代ローマ時代）における<br />7つの注目すべき建造物のことである。</span></a>」である。しかし古代ギリシャ時代で前225年頃に書かれたとされる<a class="tooltip" href="http://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A3%E3%83%AD%E3%83%B3_%28%E6%9B%96%E6%98%A7%E3%81%95%E5%9B%9E%E9%81%BF%29">フィロン<span class="tooltipCont"><img src="img/tooltip.jpg" /></span></a>の七不思議には、ファロス島の灯台は書かれておらず、バビロンの城壁が七不思議の一つに数えられていた。その後様々な形で七不思議は伝承され、六世紀頃からファロス島の灯台が七不思議の一つになった。</p>
+			</div>
+		</div>
+
+		<div class="section">
+			<h2>HTMLはどのような構成なのか？</h2>
+			<p>tooltipを表示させる &lt;a&gt; に class=&quot;tooltip&quot; を指定します。<br />
+			その &lt;a&gt; 内に class=&quot;tooltipCont&quot;を指定した要素を入れます。<br /></p>
+			
+			<code><strong class="blue">&lt;a class=&quot;tooltip&quot; href=&quot;#&quot;&gt;</strong>世界七不思議<strong class="green">&lt;span class=&quot;tooltipCont&quot;&gt;</strong>古典古代（古代ギリシャ・...<strong class="green">&lt;/span&gt;</strong><strong class="blue">&lt;/a&gt;</strong></code>
+			<div class="demo">
+				<p><a href="#">世界七不思議<span>古典古代（古代ギリシャ・...</span></a></p>
+			</div>
+			<p>この段階ではまだ普通の &lt;a&gt; 要素です。<br />
+			Javascriptとcssの設定で、  &lt;a&gt; 要素にホバーした際に&lt;span&gt; 要素を表示させるようにします。</p>
+		</div>
+
+		<div class="section">
+			<h2>まずは、Javascriptを設定する</h2>
+			<p>大きく分けて &lt;a&gt; 要素にホバーした際に &lt;span&gt; 要素を表示させる設定と<br />
+			&lt;span&gt; 要素がマウスにくっついてくる設定の2つです。</p>
+			<code>
+			$(<strong class="blue">function</strong>(){<br />
+			&nbsp;$(&quot;<strong class="blue">.tooltip</strong>&quot;)<strong class="green">.each</strong>(<strong class="blue">function</strong>(){<br />
+			&nbsp;&nbsp;var content = $(&quot;<strong class="blue">.tooltipCont</strong>&quot; , <strong class="blue">this</strong>);<br />
+			&nbsp;&nbsp;$(<strong class="blue">this</strong>)<strong class="green">.mousemove</strong>(<strong class="blue">function</strong>(event){<br />
+			&nbsp;&nbsp;$(<strong class="blue">content</strong>)<strong class="green">.css</strong>({<br />
+			&nbsp;&nbsp;&nbsp;top : event.pageY + 15,<br />
+			&nbsp;&nbsp;&nbsp;left : event.pageX + 15<br />
+			&nbsp;&nbsp;});<br />
+			&nbsp;});<br />
+			<br />
+			&nbsp;$(<strong class="blue">this</strong>)<strong class="green">.hover</strong>(<strong class="blue">function</strong>(){<br />
+			&nbsp;&nbsp;$(<strong class="blue">content</strong>)<strong class="green">.stop</strong>(true , true)<strong class="green">.fadeIn</strong>(300);<br />
+			&nbsp;&nbsp;}, <strong class="blue">function</strong>(){<br />
+			&nbsp;&nbsp;&nbsp;$(<strong class="blue">content</strong>)<strong class="green">.css</strong>(&quot;display&quot; , &quot;none&quot;);<br />
+			&nbsp;&nbsp;});<br />
+			&nbsp;});<br />
+			<br />
+			});			</code>		</div>
+
+		<div class="section">
+			<h2>最後にcssの設定をします</h2>
+			<p>Javascriptの設定で動作は完成しました。<br />
+			cssでは表示される &lt;span&gt; 要素に装飾をします。</p>			
+			<code>
+			.tooltipCont {<br />
+			&nbsp;<strong class="blue">display</strong>: <span class="green">none</span>;<br />
+			&nbsp;<strong class="blue">position</strong>: <span class="green">absolute</span>;<br />
+			&nbsp;<strong class="blue">z-index</strong>: <span class="green">100</span>;<br />
+			&nbsp;<strong class="blue">padding</strong>: <span class="green">.5em</span>;<br />
+			&nbsp;<strong class="blue">background</strong>: <span class="green">#cef3ff</span>;<br />
+			&nbsp;<strong class="blue">-moz-border-radius</strong>: <span class="green">5px</span>;<br />
+			&nbsp;<strong class="blue">-webkit-border-top</strong>: <span class="green">5px</span>;<br />
+			&nbsp;<strong class="blue">font-size</strong>: <span class="green">80%</span>;<br />
+			&nbsp;<strong class="blue">color</strong>: <span class="green">#000</span>;<br />
+			&nbsp;<strong class="blue">text-decoration</strong>: <span class="green">none</span>;<br />
+			}			</code>
+			<p>※Javascriptで &lt;span&gt; 要素を非表示にしてもいいのですが、ページ読み込みの際に若干見えてしまいますので、cssで display: none; を指定しています。</p>
+		</div>
+
+		<div class="section">
+			<h2>使用用途</h2>
+			<p class="tooltip02" style="position: relative;">氏名：<input  type="text" id="name" name="name" /><span class="tooltip02Cont">(例：田中太郎)</span></p>
+			<p class="tooltip03" style="position: relative; margin-top: 2em;"><a href="#">お使いのブラウザを選んで下さい。</a>
+			<span class="tooltip03Cont"><a href="#">IE6</a> <a href="#">IE7</a> <a href="#">IE8</a> <a href="#">FireFox</a> <a href="#">Safari</a></span></p>
+		</div>
+
+	
+</div>
+
+	<div id="sideNav">
+		<ul>
+			<li class="indexTop"><a href="#index"></a>
+				<ul>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	
+</body>
+</html>

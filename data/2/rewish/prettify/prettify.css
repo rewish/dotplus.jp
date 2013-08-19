@@ -1,0 +1,31 @@
+/* Pretty printing styles. Used with prettify.js. */
+
+.str { color: #E4007F; }
+.kwd { color: #036EB8; font-weight: bold; }
+.com { color: #800; }
+.typ { color: #606; }
+.lit { color: #066; }
+.pun { color: #FFF; }
+.pln { color: #FFF; }
+.tag { color: #036EB8; }
+.atn { color: #036EB8; }
+.atv { color: #E4007F; }
+.dec { color: #606; }
+pre.prettyprint { padding: 10px; border: 2px solid #111; background: #222; }
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums { margin-top: 0; margin-bottom: 0 } /* IE indents via margin-left */
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L5,
+li.L6,
+li.L7,
+li.L8 { list-style-type: none }
+/* Alternate shading for lines */
+li.L1,
+li.L3,
+li.L5,
+li.L7,
+li.L9 { background: #eee }

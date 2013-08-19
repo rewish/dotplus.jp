@@ -1,0 +1,218 @@
+@charset "UTF-8";
+
+/* ==================================================================== *
+ * @filename      textbody.css
+ * @description   記事本文のスタイル
+ *
+ * @version       $Revision: 27 $
+ * @modifiedby    $LastChangedBy: rewish $
+ * @lastmodified  $Date: 2010-08-10 19:10:17 +0900 (Tue, 10 Aug 2010) $
+ * ==================================================================== */
+
+div.textbody section {
+	margin		: 0 0 2.5em;
+	overflow	: hidden;
+}
+
+div.textbody h2 {
+	margin		: 2.5em 0 0.5em;
+	padding		: 0 0 0 6px;
+	border-left	: 4px solid #693;
+	color		: #000;
+	font-size	: 116%;
+	font-weight	: bold;
+	line-height	: 1.2;
+}
+
+div.textbody section h2 {
+	margin		: 0 0 0.5em;
+}
+
+div.textbody h3 {
+	margin		: 2.5em 0 1em;
+	padding		: 5px 0 0 5px;
+	line-height	: 1.6;
+	border-left	: 4px solid #369;
+	color		: #555;
+	font-size	: 108%;
+	font-weight	: bold;
+}
+
+div.textbody section h3 {
+	margin		: 0 0 1em;
+}
+
+div.textbody p {
+	margin		: 0 0 1.2em;
+	overflow	: hidden;
+}
+
+div.textbody pre {
+	margin		: 0 0 1.2em;
+	padding		: 5px;
+	background	: #F0F0F0;
+	font-family	:
+		'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', osaka,
+		'VL ゴシック', 'ＭＳ ゴシック', sans-serif !important;
+	overflow-x	: scroll;
+	overflow-y	: visible;
+	*overflow	: scroll;
+	line-height	: 1.4;
+}
+
+div.textbody ul {
+	margin		: 0.3em 10px 1.5em;
+	list-style-type	: disc;
+}
+div.textbody ul li {
+	margin		: 0 0 5px 1.2em;
+}
+div.textbody ol {
+	margin		: 0.3em 10px 1.5em;
+	border-left	: 3px solid #CCC;
+	list-style-type	: decimal;
+}
+	div.textbody ol li {
+		margin		: 0 0 5px 2.5em;
+	}
+div.textbody li ul {
+	margin		: 0.3em 0 1em 5px;
+	list-style-type	: circle;
+}
+div.textbody li ol {
+	margin		: 0.3em 0 1em;
+}
+div.textbody ol li ul li {
+	margin		: 0 0 0 1.2em;
+}
+
+div.textbody dl {
+	margin		: 0 0 20px;
+	padding		: 10px 15px;
+	border-radius			: 7px;
+	-moz-border-radius		: 7px;
+	-webkit-border-radius	: 7px;
+	background	: #DDD;
+}
+	div.textbody dl dt {
+		margin		: 0 0 2px;
+	}
+	div.textbody dl dd {
+		margin		: 0 0 5px;
+		padding		: 5px 7px;
+		border-radius			: 7px;
+		-moz-border-radius		: 7px;
+		-webkit-border-radius	: 7px;
+		background	: #FFF;
+	}
+		div.textbody dl dd ul,
+		div.textbody dl dd ol {
+			margin-bottom	: 0 !important;
+			margin-left	: 0 !important;
+			border-left	: 0 !important;
+		}
+
+div.textbody blockquote {
+}
+
+div.textbody table {
+	width		: 100%;
+	margin		: 0 auto 1.5em;
+	border		: solid 1px #CCC;
+	font-size	: 0.9em;
+}
+
+div.textbody table th,
+div.textbody table td {
+	padding		: 5px 10px;
+	border		: solid 1px #CCC;
+}
+
+div.textbody table tr th {
+	background	: #DDD;
+	text-align	: center;
+}
+
+div.textbody table tr td {
+	background	: #FDFDFD;
+}
+
+div.textbody table tr.even td {
+	background	: #F2F0EE;
+}
+
+div.textbody table tr.over td {
+	background	: #666;
+	color		: #FFF;
+}
+
+div.textbody p img.left {
+	float		: left;
+	margin		: 0 15px 1em 0;
+}
+
+div.textbody p img.right {
+	float		: right;
+	margin		: 0 15px 1em 0;
+}
+
+div.textbody a img {
+	padding		: 2px;
+	border		: solid 1px #CCC;
+}
+
+div.textbody a:hover img {
+	border : solid 1px #0BF;
+}
+
+
+div.textbody span.note {
+	padding		: 0 5px;
+	margin		: 0 0.2em;
+	font-size	: 0.8em;
+}
+
+div.textbody p.note {
+	margin-left	: 1em;
+	color		: #666;
+	text-indent	: -1em;
+}
+
+ins, del {
+	display		: block;
+	padding		: 5px 10px;
+}
+
+ins[datetime]:before,
+del[datetime]:before {
+	display		: block;
+}
+
+ins {
+	text-decoration: none;
+	background	: #E6EFDD;
+}
+
+ins[datetime]:before {
+	content		: "[" attr(datetime) "]追記";
+}
+
+del {
+	background	: #EFEFEF;
+}
+
+del[datetime]:before {
+	content		: "[" attr(datetime) "]削除";
+}
+
+code {
+	margin		: 0 3px;
+	padding		: 1px 5px;
+	border-bottom	: 1px dashed #666;
+	background	: #EFEFEF;
+	color		: #060;
+	line-height	: 1.6;
+}
+
+
+/* ----- End Of File ----- */

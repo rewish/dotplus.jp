@@ -1,0 +1,173 @@
+@charset "UTF-8";
+
+/* ==================================================================== *
+ * @filename      single.css
+ * @description   シングルページのスタイル
+ *
+ * @version       $Revision: 2 $
+ * @modifiedby    $LastChangedBy: rewish $
+ * @lastmodified  $Date: 2010-04-06 11:37:02 +0900 (火, 06  4月 2010) $
+ * ==================================================================== */
+
+
+/* ---------------------------------------------------- *
+ *  Post Navigation
+ * ---------------------------------------------------- */
+#postNav {
+	margin		: -1em 0 0;
+	padding		: 0 0 0 120px;
+	overflow	: hidden;
+}
+	#postNav dl {
+		float		: left;
+		width		: 600px;
+		margin		: 15px 0;
+		padding		: 0 0 10px;
+	}
+		#postNav dl dt {
+			clear	: left;
+			float	: left;
+			width	: 5em;
+		}
+
+
+/* ---------------------------------------------------- *
+ *  Comments & Trackbacks
+ * ---------------------------------------------------- */
+section.feedback {
+		padding		: 20px 0 0 120px;
+		border-top	: 1px solid #DDD;
+}
+	section.feedback h2 {
+		margin		: 0 0 1em;
+	}
+	section.feedback section.logs article {
+		margin		: 0 0 1.5em;
+	}
+		section.feedback section.logs h3 {
+			height		: 0;
+			text-indent	: -9999px;
+			overflow	: hidden;
+		}
+		section.feedback section.logs article div.meta {
+			margin		: 0 0 15px;
+			overflow	: hidden;
+		}
+			section.feedback section.logs article div.meta img {
+				float		: left;
+				margin		: 0 10px 0 0;
+			}
+			section.feedback section.logs article div.meta time {
+				display		: block;
+			}
+		section.feedback section.logs article div.body {
+			position	: relative;
+			padding		: 10px 15px 1px;
+			border-radius			: 7px;
+			-moz-border-radius		: 7px;
+			-webkit-border-radius	: 7px;
+			background	: #DDD;
+		}
+		section.feedback section.logs article div.body:before {
+			content		: "";
+			position	: absolute;
+			top			: -10px;
+			left		: 25px;
+			width		: 0;
+			height		: 0;
+			margin		: 0 0 0 -5px;
+			border-bottom	: 10px solid #DDD;
+			border-right	: 5px solid transparent;
+			border-left	: 5px solid transparent;
+		}
+			section.feedback section.logs article div.body p {
+				margin		: 0 0 1em;
+			}
+
+
+/* ---------------------------------------------------- *
+ * Comment
+ * ---------------------------------------------------- */
+#commentsForm {
+	margin		: 0 0 20px;
+	padding		: 15px;
+	border-radius			: 7px;
+	-moz-border-radius		: 7px;
+	-webkit-border-radius	: 7px;
+	background	: #DDD;
+	font-weight	: bold;
+}
+	#commentsForm label {
+		cursor		: pointer;
+	}
+	#commentsForm dd {
+		margin		: 0 0 5px;
+	}
+		#commentsForm input[type="text"] {
+			width		: 200px;
+			padding		: 3px 5px;
+			border		: 1px solid #FFF;
+			border-radius			: 7px;
+			-moz-border-radius		: 7px;
+			-webkit-border-radius	: 7px;
+			background	: #FFF;
+		}
+		#commentsForm textarea {
+			width		: 500px;
+			padding		: 3px 5px;
+			border		: 1px solid #FFF;
+			border-radius			: 7px;
+			-moz-border-radius		: 7px;
+			-webkit-border-radius	: 7px;
+			background	: #FFF;
+		}
+		#commentsForm input[type="submit"] {
+			margin		: 5px 0 0;
+			padding		: 5px 10px;
+			border		: 1px solid #666;
+			border-radius			: 7px;
+			-moz-border-radius		: 7px;
+			-webkit-border-radius	: 7px;
+			background	: #FFF;
+			cursor		: pointer;
+		}
+		#commentsForm input[type="text"]:hover,
+		#commentsForm input[type="text"]:focus,
+		#commentsForm textarea:hover,
+		#commentsForm textarea:focus,
+		#commentsForm input[type="submit"]:hover {
+			border		: 1px solid #DA9A1B;
+		}
+
+
+/* ---------------------------------------------------- *
+ *  Trackback
+ * ---------------------------------------------------- */
+#trackbacks dl.data {
+	margin		: 0 0 20px;
+	padding		: 10px 15px;
+	border-radius			: 7px;
+	-moz-border-radius		: 7px;
+	-webkit-border-radius	: 7px;
+	background	: #DDD;
+}
+	#trackbacks dl.data dt {
+		margin		: 0 0 2px;
+	}
+	#trackbacks dl.data dd {
+		margin		: 0 0 5px;
+		padding		: 3px 5px;
+		border-radius			: 7px;
+		-moz-border-radius		: 7px;
+		-webkit-border-radius	: 7px;
+		background	: #FFF;
+	}
+#trackbacks section.logs article div.meta time {
+	display		: inline;
+}
+	#trackbacks section.logs article div.meta time:before {
+		content		: " - ";
+	}
+
+
+/* ----- End Of File ----- */

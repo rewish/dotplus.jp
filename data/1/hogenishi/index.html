@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<meta http-equiv="Content-Language" content="ja" /> 
+<meta http-equiv="Content-Style-Type" content="text/css" /> 
+<meta http-equiv="Content-Script-Type" content="text/javascript" /> 
+<meta http-equiv="imagetoolbar" content="no" /> 
+<title>[デモ]HTMLのスライド mukiSlide｜factory.yusukenakanishi.com</title> 
+<meta name="keywords" content="" /> 
+<meta name="description" content="" /> 
+<link rel="stylesheet" type="text/css" media="all" href="./css/default.css" /> 
+<link rel="stylesheet" type="text/css" media="all" href="./css/base.css" /> 
+<script type="text/Javascript" src="./js/lib/jquery.min.js"></script> 
+<script type="text/Javascript" src="./js/mukiSlide.js"></script> 
+<script type="text/javascript"> 
+// <![CDATA[
+jQuery(function($){
+    // デフォルトはshow、設定出来るのはfadeIn、slideDown
+    $.mukiSlide({ motion: 'fadeIn' });
+});
+// ]]>
+</script> 
+</head> 
+<body> 
+<div id="title"> 
+    <h1>.coderで発表！</h1> 
+</div> 
+<div id="content"> 
+    <div class="section cover"> 
+        <h2>祝はじめてのプラグイン（mukiSlideの簡単な説明）</h2> 
+        <p>〜 できた。できたよ！jQueryのスライドplugin！嬉しくなっちゃって発表しちゃいます。 〜</p> 
+    </div> 
+    <div class="section separate"> 
+        <h2>自己紹介</h2> 
+        <dl> 
+            <dt>名前</dt> 
+            <dd>中西祐介</dd> 
+            <dt>ふりがな</dt> 
+            <dd>なかにしゆうすけ</dd> 
+            <dt>職業</dt> 
+            <dd>HTML、CSSコーダー</dd> 
+        </dl> 
+    </div> 
+    <div class="section separate"> 
+        <h2>発表内容</h2> 
+        <p>mukiSlideの簡単な説明を、3分ぐらいでさせていただきます。すぐですのでお付き合い下さい。</p> 
+        <p>ところでmukiSlide知ってる人。<strong>手あげて！</strong></p> 
+        <p>全員知っておられるという驚きの結果！</p> 
+        <p>では、はじめます！</p> 
+    </div> 
+    <div class="section separate"> 
+        <h2>操作方法</h2> 
+        <p><strong>右上にあるメニューボタン</strong>と<strong>キーボード</strong>での操作ができます。斬新！</p> 
+        <dl> 
+            <dt>キーバインド</dt> 
+            <dd>↑：最初のページへ</dd> 
+            <dd>←：前のページへ</dd> 
+            <dd>→, space：次のページヘ</dd> 
+            <dd>↓：最後のページへ</dd> 
+        </dl> 
+        <p>でも、とある条件下で連打するとおかしな挙動になります。そのうち直します。すみません＞＜</p> 
+    </div> 
+    <div class="section"> 
+        <h2>推奨ブラウザ</h2> 
+        <p>IEは確認してませんが上手く動かないっぽいです。でも今時、IEでないとダメってことないよね。むしろ問いたい選択肢がたくさんあって、しかもその他のブラウザが優れているとわかってて何故IEなんだい？何故なんだい？</p> 
+        <ul> 
+            <li>Safari</li> 
+            <li>Chrome</li> 
+            <li>Firefox</li> 
+            <li>Opera</li> 
+        </ul> 
+    </div> 
+    <div class="section"> 
+        <h2>基本的なHTML</h2> 
+<pre><code>// 必要なJavaScript
+&lt;script type="text/Javascript" src="./js/lib/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/Javascript" src="./js/mukiSlide.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+jQuery(function($){
+    // デフォルトはshow、設定出来るのはfadeIn、slideDown
+    $.mukiSlide({ motion: 'fadeIn' });
+});
+&lt;/script&gt;
+ 
+// プレゼンのタイトル
+&lt;div id="title"&gt;
+    &lt;h1&gt;jQueryでプレゼン用のスライド作成&lt;/h1&gt;
+&lt;/div&gt;
+// ここから各ページ
+&lt;div id="content"&gt;
+    // .sectionのかたまりが1ページ。.coverを指定すると表紙風のレイアウトになる。
+    &lt;div class="section cover"&gt;
+        &lt;h2&gt;表紙タイトル&lt;/h2&gt;
+        &lt;p&gt;〜 リード文 〜&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="section"&gt;
+        &lt;h2&gt;ページタイトル&lt;/h2&gt;
+        &lt;p&gt;フォントの色などの細かな調整はCSS出できます。&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+// コピーライトなど
+&lt;address&gt;右下に表示されます。&lt;/address&gt;</code></pre> 
+    </div> 
+    <div class="section"> 
+        <h2>表示例1</h2> 
+        <p>ページのレイアウト、フォントサイズ、フォントカラーなど装飾に関する大抵のものはCSSの変更で可能です。</p> 
+        <dl> 
+            <dt>ダミーテキスト</dt> 
+            <dd>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</dd> 
+        </dl> 
+        <table cellpadding="0" cellspacing="0" border="0"> 
+            <tr> 
+                <th>ダミーテキスト</th> 
+                <td>ダミーテキストダミーテキスト</td> 
+                <td>ダミーテキストダミーテキスト</td> 
+            </tr> 
+            <tr> 
+                <th>ダミーテキスト</th> 
+                <td>ダミーテキストダミーテキスト</td> 
+                <td>ダミーテキストダミーテキスト</td> 
+            </tr> 
+        </table> 
+<pre><code>$(function(){
+    var hoge = "hogeee!";
+});
+</code></pre> 
+    </div> 
+    <div class="section"> 
+        <h2>表示例2</h2> 
+        <ul> 
+            <li>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</li> 
+            <li>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
+                <ul> 
+                    <li>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</li> 
+                    <li>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</li> 
+                    <li>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</li> 
+                </ul> 
+            </li> 
+        </ul> 
+        <ol> 
+            <li>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</li> 
+            <li>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
+                <ol> 
+                    <li>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</li> 
+                    <li>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</li> 
+                    <li>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</li> 
+                </ol> 
+            </li> 
+        </ol> 
+    </div> 
+    <div class="section separate"> 
+        <h2>特殊な動きを指定</h2> 
+<pre><code>&lt;div class="section separate"&gt;
+    &lt;p&gt;ここは先に表示&lt;strong&gt;ここが後から表示&lt;/strong&gt;ここは先に表示&lt;/p&gt;
+&lt;/div&gt;</code></pre> 
+        <p>separateをclassに指定することで個別表示が出来ます。strongで囲った要素は後から表示させることが出来ます。リストを入れ子にするなど階層が深くなると思った挙動にならないことがあります。</p> 
+        <p>ここは先に表示<strong>ここが後から表示</strong>ここは先に表示</p> 
+        <ol> 
+            <li>ここは先に表示
+                <ul> 
+                    <li>ここは先に表示<strong>ここが後から表示</strong>ここは先に表示</li> 
+                </ul> 
+            </li> 
+        </ol> 
+    </div> 
+    <div class="section"> 
+        <h2>その他</h2> 
+        <ol> 
+            <li>これを使うときにそんな環境なわけないけど、CSSやJavaScriptがOFFの環境でも優しくなっているはずです。
+                <ol> 
+                    <li>OFF環境には必要ないものなので右上のメニューとページ番号はJavaScriptで書き出しています。</li> 
+                    <li>本当は良くないのかもだけど、そのCSSもJavaScriptで記述しています。</li> 
+                </ol> 
+            </li> 
+            <li>使う人いるかどうかわからないけど、ライセンスとか難しいこと言わないで自由に使って下さい。</li> 
+            <li><a href="http://labs.yusukenakanishi.com/2010/03/13/mukislide/">http://labs.yusukenakanishi.com/2010/03/13/mukislide/</a>にも簡単な説明があります。</li> 
+        </ol> 
+    </div> 
+    <div class="section cover"> 
+        <h2>終り</h2> 
+        <p>〜 ご清聴ありがとうございました。 〜</p> 
+        <p>※この後のスピーカーの皆さん、もちろんこの素敵プラグインmukiSlideを使って発表されますよね？</p> 
+    </div> 
+</div> 
+<address>Copyright &copy; <a href="http://yusukenakanishi.com/">Yusuke Nakanishi</a>.</address> 
+</body> 
+</html> 

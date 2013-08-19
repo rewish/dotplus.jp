@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Language" content="ja" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="imagetoolbar" content="no" />
+<title>[デモ]JavaScriptとDOM｜factory.yusukenakanishi.com</title>
+<meta name="keywords" content="jQuery, plugin, slide, javascript, CSS, HTML, presantation" />
+<meta name="description" content="ドットコーダーセッション2「JavaScriptとDOM」" />
+<link rel="start" href="/index.html" />
+<link rel="chapter" href="http://yusukenakanishi.com/" title="Home" />
+<link rel="chapter" href="http://blog.yusukenakanishi.com/" title="Blog" />
+<link rel="chapter" href="http://labs.yusukenakanishi.com/" title="Labs" />
+<link rel="copyright" href="http://yusukenakanishi.com/#about" title="Copyright" />
+<link rev="made" href="mailto:yusuke.nakanishi@gmail.com" />
+<link rel="shortcut icon" href="/common/img/factory.ico" />
+<link rel="stylesheet" type="text/css" media="all" href="./css/default.css" />
+<link rel="stylesheet" type="text/css" media="all" href="./css/base.css" />
+<script type="text/Javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script> 
+<script type="text/Javascript" src="./js/mukiSlide.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+jQuery(function($){
+    // デフォルトはshow、設定出来るのはfadeIn、slideDown
+    $.mukiSlide({ motion: 'fadeIn' });
+});
+// ]]>
+</script>
+</head>
+<body>
+<div id="title">
+    <h1>JavaScriptとDOM</h1>
+</div>
+<div id="content">
+    <div class="section cover">
+        <h2>ドットコーダーセッション2「JavaScriptとDOM」</h2>
+        <p>@hogenishi</p>
+    </div>
+    <div class="section">
+        <h2>簡単な流れ</h2>
+        <ol>
+            <li>自己紹介（00:01）</li>
+            <li>JavaScriptの簡単な歴史（00:03）</li>
+            <li>JavaScripについて（00:11）</li>
+            <li>DOMについて（00:19）</li>
+            <li>質疑応答（00:20）</li>
+        </ol>
+        <p>以上の構成で20分ぐらいお話させていただきます。</p>
+    </div>
+    <div class="section">
+        <h2>自己紹介</h2>
+        <dl>
+            <dt>名前</dt>
+            <dd>中西 祐介</dd>
+            <dt>職業</dt>
+            <dd>HTML、CSSコーダー</dd>
+            <dt>趣味</dt>
+            <dd>ドットコーダー</dd>
+        </dl>
+        <p>Twitterは<strong>hogenishi</strong>というアカウントでアイコンは <img src="img/illust.gif" alt="illust" width="75" height="75" /> こんなやつです。<br />
+        技術的なつぶやきはほとんどしていませんがお邪魔でなければフォローしてくださいね。</p>
+    </div>
+    <div class="section cover">
+        <h2>JavaScriptの簡単な歴史</h2>
+    </div>
+    <div class="section">
+        <h2>JavaScriptの起源</h2>
+        <p>NetscapeがSun Microsystemsと協力して開発したもの。その当時、ブラウザ市場を支配していたNetscape Navigator 2とともに　JavaScript1.0が1995年にデビューしました。</p>
+        <p>Microsoftが遅れを取るまいとIE3のリリースに合わせて、独自言語であるVBScriptと、一種のJavaScriptであるJScriptをリリースする。これに対しNetscapeとSunは、ECMA（European Computer Manufacturers Association）と共にJavaScriptを標準化することに。その結果生まれたのがECMAScript。この名前は定着せずにマーケティング戦略としてSunが開発したJavaのネームバリューを利用。本来はLiveScriptと呼ばれることになっていたがJavaScriptに。JavaとJavaScriptという2つの言語について人々の頭を混乱させる結果に。</p>
+    </div>
+    <div class="section">
+        <h2>NetscapeとMicrosoftのブラウザ戦争</h2>
+        <p>NN4が1997年6月に、同年の10月にIE4がリリース。それぞれに大拡張されたDOM。JavaScriptで多くのことが新たにできるように。ただそれぞれに独自の仕様で開発していたので、差異が生まれ開発者がDOMスクリプティングを利用する際には、コードを分岐させる必要があった。当時はNN4とIE4用に2つのスクリプトを書いていた。</p>
+    </div>
+    <div class="section separate">
+        <h2>Web標準の登場</h2>
+        <p>W3CがNetscapeとMicrosoftの協力のもと1998年10月にDOMレベル1を完成させる。</p>
+        <h3>ブラウザ戦争の終わり</h3>
+        <p>ブラウザの市場シェアの覇権争いは、Microsoftの勝利に終わりました。CSSやJavaScriptの実装の不一致が多くあるのでで、ブラウザ・メーカーの占有的姿勢に対する反動が始まり、WaSP(Web Standards Project)と称されるグループが結成される。WaSPの最初の仕事はブラウザ・メーカーにW3Cの勧告に準拠するように働きかけることでした。WaSPの働きかけによるものか時流のものかはわからないがWeb標準のサポートは近年向上されています。</p>
+        <h3>新たなる始まり</h3>
+        <p>NNがなくなって、IE、Safari、FF、Operaなどの登場と台頭。現在よく使われているブラウザの95%には、DOMのサポートが組み込まれている。各ブラウザのHTMLレンダリングエンジンや各ブラウザの対応状況を参考に。</p>
+    </div>
+    <div class="section cover">
+        <h2>JavaScriptについて</h2>
+    </div>
+    <div class="section">
+        <h2>JavaScriptとは</h2>
+        <p>JavaScriptはWebブラウザ上で主に動作します。JavaScriptが誕生した当時、いまと違って、Webページはとても静的でした（文字と写真のみで動きがなかった）。閲覧者が文字のサイズを変更したり、クリックでデザインを変えたりするようなアクションやユーザーとの対話性を出すために、JavaScriptは作り出されました。<br />
+        その他の特徴としてインタプリタ言語ということが挙げられます。インタプリタとはプログラムの実行時に、順次命令を解釈しながら実行させるタイプのプログラムで、コンパイラ言語のようにコンパイルしてそのコンピュータが理解できる言葉に直す手間が省けます。エラーがあったとしても修正してそのまま再度起動するという事も容易に出来ますが、インタプリタはコンパイラ言語に比べて実行時のスピードは遅くなってしまいます。</p>
+    </div>
+    <div class="section separate">
+        <h2>JavaScriptに必要なもの</h2>
+        <ol>
+            <li>テキストエディタ</li>
+            <li>ブラウザ</li>
+            <li>情熱</li>
+        </ol>
+        <p>だけなんです。</p>
+        <p>最後の要素があればJavaScriptに限らず何でも出来ますけどね。</p>
+    </div>
+    <div class="section separate">
+        <h2>JavaScriptを実行するには</h2>
+        <p>JavaScriptで書かれたコードは(X)HTMLで書かれたドキュメントの中から実行される必要があります。<br />
+        これを行う方法は2通りです。</p>
+        <h3>&lt;head&gt;内に直接記述する</h3>
+        <pre><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script type="text/javascript"&gt;
+    ここにJavaScriptのコードを記述
+&lt;/script&gt;
+&lt;style type="text/css"&gt;
+&lt;!--
+    CSSならこのように書きますよね。同じようなイメージです。    
+--&gt;
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    ここにマークアップを記述
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        <h3>&lt;script&gt;タグの中でsrc属性を使ってファイルを読み込む</h3>
+        <pre><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script type="text/Javascript" src="hoge.js"&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" type="text/css" media="all" href="hoge.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    ここにマークアップを記述
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+    <div class="section separate">
+        <h2>シンタックス</h2>
+        <dl>
+            <dt>シンタックス</dt>
+            <dd>プログラミング言語の文法規則、構文規則。もっと噛み砕くと書き方のルール。</dd>
+        </dl>
+        <p>以下の英語の文に当てはめて説明すると、英語は文の先頭は大文字で始まり最後はピリオドで終わるという書き方のルールがあります。</p>
+        <pre><code>We love dotcoder.</code></pre>
+        <p>ではJavaScriptのシンタックスはどのようなものか？</p>
+        <pre><code>var hoge = 'ほげほげ';</code></pre>
+    </div>
+    <div class="section">
+        <h2>Demo</h2>
+        <p>変数や配列、演算、条件文、ループ文などなど説明したいことはたくさんあるのですが時間が限られているので簡単な<a href="demo001.html">Demo</a>を…。</p>
+        <pre><code>// 変数を宣言
+var msg = 'Hello, World!';
+// 条件文
+if(msg) {
+    alert(msg);
+} else {
+    alert('変数に何も代入されていません。');
+};</code></pre>
+        <p>まず変数を宣言します。変数（variable）というのは、数の値や文字列を一時的に保管しおくための入れ物。＝は左辺と右辺が等しいという意味ではなくて右辺を左辺に代入するという意味です。</p>
+        <pre><code>var msg = 'Hello, World!';</code></pre>
+        <p>if文は以下のような処理をしてくれる条件文です。</p>
+        <pre><code>if(条件式) {
+    // 条件が満たされた場合の処理
+} else {
+    // 条件が満たされなかった場合の処理
+};</code></pre>
+    </div>
+    <div class="section cover">
+        <h2>DOMについて</h2>
+    </div>
+    <div class="section separate">
+        <h2>DOMとは</h2>
+        <p>DOM（Document Object Model）とは，HTMLやXMLといったマークアップ言語へアクセスするためのAPI（Application Programming Interface）です。</p>
+        <p>DOMで用いられるもっとも重要な決まりごとは、ドキュメントをツリー図で表現するということ。さらに、ドキュメントは家系図として表現することができる。<a href="demo002.html">Demo</a></p>
+        <pre><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja"&gt;
+&lt;head&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
+    &lt;title&gt;[デモ]JavaScriptとDOM｜factory.yusukenakanishi.com&lt;/title&gt;
+    &lt;link rel="stylesheet" type="text/css" media="all" href="http://factory.yusukenakanishi.com/common/css/demo.css" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;dotcoder&lt;/h1&gt;
+    &lt;p title="メンバー"&gt;ドコダの面々&lt;/p&gt;
+    &lt;ul id="hogeList"&gt;
+        &lt;li&gt;noriさん&lt;/li&gt;
+        &lt;li&gt;rewさん&lt;/li&gt;
+        &lt;li&gt;hilokiさん&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        <p><img src="img/tree01.gif" alt="tree" width="" height="" /></p>
+    </div>
+    <div class="section separate">
+        <h2>ノード</h2>
+        <p>ノード（node）という用語はネットワークの世界から来た言葉で、ネットワーク上の交点を指示するために使われます。DOMにもよく似た状況が存在します。ドキュメントは、ドキュメントツリーの枝や葉というノードが集まったものです。</p>
+        <pre><code>&lt;p title="メンバー"&gt;ドコダの面々&lt;/p&gt;</code></pre>
+        <p><img src="img/tree02.gif" alt="tree" width="" height="" /></p>
+    </div>
+    <div class="section separate">
+        <h2>demo</h2>
+        <p>簡単な<a href="demo003.html">Demo</a>を…。</p>
+        <pre><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja"&gt;
+&lt;head&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
+    &lt;title&gt;[デモ]JavaScriptとDOM｜factory.yusukenakanishi.com&lt;/title&gt;
+    &lt;link rel="stylesheet" type="text/css" media="all" href="http://factory.yusukenakanishi.com/common/css/demo.css" /&gt;
+    &lt;script type="text/javascript"&gt;
+    //&lt;![CDATA[
+    window.onload = function() {
+        var li = document.getElementById('dotcoder').getElementsByTagName('li');
+        for (var i = 0; i&lt;li.length; i++) alert(li[i].innerHTML);
+    }
+    //]]&gt;
+    &lt;/script&gt; 
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;dotcoder&lt;/h1&gt;
+    &lt;p title="メンバー"&gt;ドコダの面々&lt;/p&gt;
+    &lt;ul id="dotcode"&gt;
+        &lt;li&gt;noriさん&lt;/li&gt;
+        &lt;li&gt;rewさん&lt;/li&gt;
+        &lt;li&gt;hilokiさん&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+    
+    
+    
+    
+    <div class="section cover">
+        <h2>質疑応答</h2>
+        <p></p>
+    </div>
+    <div class="section cover">
+        <h2>以上です！</h2>
+        <p>皆様お疲れ様でした。</p>
+    </div>
+</div>
+<address>Copyright &copy; <a href="http://yusukenakanishi.com/">Yusuke Nakanishi</a>.</address>
+</body>
+</html>

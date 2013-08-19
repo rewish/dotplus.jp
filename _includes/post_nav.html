@@ -1,0 +1,12 @@
+<nav id="postNav">
+  <dl>
+    {% if page.next %}
+    <dt class="newer">Newer</dt>
+    <dd><a href="{{ page.next.url }}">{{ page.next.title }}</a></dd>
+    {% endif %}
+    {% if page.previous %}
+    <dt class="older">Older</dt>
+    <dd><a href="{{ page.previous.url }}">{{ page.previous.title }}</a></dd>
+    {% endif %}
+  </dl>
+</nav>

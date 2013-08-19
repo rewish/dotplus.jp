@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+/* ==================================================================== *
+ * @filename      header.css
+ * @description   ページ上部のスタイル
+ *
+ * @version       $Revision: 2 $
+ * @modifiedby    $LastChangedBy: rewish $
+ * @lastmodified  $Date: 2010-04-06 11:37:02 +0900 (火, 06  4月 2010) $
+ * ==================================================================== */
+
+
+/* ---------------------------------------------------- *
+ *  Header
+ * ---------------------------------------------------- */
+body > header {
+	padding-bottom	: 20px;
+	border-bottom	: 1px solid #DCDDDD;
+}
+
+
+/* ---------------------------------------------------- *
+ *  Contents navigation
+ * ---------------------------------------------------- */
+body > nav ul {
+	height		: 50px;
+}
+	body > nav li {
+		float		: left;
+		height		: 50px;
+		padding		: 0 40px 0 10px;
+		border-left	: 1px solid #DCDDDD;
+		font-size	: 77%;
+		line-height	: 1.4;
+		color		: #666;
+	}
+		body > nav li a,
+		body > nav li a:link,
+		body > nav li a:visited {
+			display		: block;
+			color		: #333;
+			font-size	: 146.5%;
+			font-weight	: bold;
+		}
+
+
+/* ----- End Of File ----- */

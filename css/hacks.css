@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+/* ==================================================================== *
+ * @filename      hacks.css
+ * @description   CSSハック＋α
+ *
+ * @version       $Revision: 2 $
+ * @modifiedby    $LastChangedBy: rewish $
+ * @lastmodified  $Date: 2010-04-06 11:37:02 +0900 (火, 06  4月 2010) $
+ * ==================================================================== */
+
+/* ---------------------------------------------------- *
+ *  Clear Fix
+ * ---------------------------------------------------- */
+/*
+div.main:after {
+	content		: ".";
+	display		: block;
+	height		: 0;
+	clear		: both;
+	visibility	: hidden;
+}
+*/
+
+/* ----- End Of File ----- */

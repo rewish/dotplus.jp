@@ -1,0 +1,20 @@
+exclude: [CNAME, README.md, .gitignore, .ruby-version]
+
+permalink: /:year/:month/:day/:title
+markdown: kramdown
+
+title: ".+ / ドットプラス / どっとぷらす"
+twitter: dtpsjp
+
+baseurl: 
+url: http://dotplus.jp/
+
+authors:
+  nori:
+    gravatar: 86731370f3bb39a0dcb33d3e872496ee
+  hiloki:
+    gravatar: c5ab7cbecce50bc05680fc2574b89f47
+  rewish:
+    gravatar: 2cf07bca61d3d95864dc5fe706375018
+  hogenishi:
+    gravatar: 1368b2490c428ab476ec7d152343b843

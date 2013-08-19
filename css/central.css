@@ -1,0 +1,201 @@
+@charset "UTF-8";
+
+/* ==================================================================== *
+ * @filename      central.css
+ * @description   主要部分のスタイル
+ *
+ * @version       $Revision: 2 $
+ * @modifiedby    $LastChangedBy: rewish $
+ * @lastmodified  $Date: 2010-04-06 11:37:02 +0900 (火, 06  4月 2010) $
+ * ==================================================================== */
+
+
+/* ---------------------------------------------------- *
+ *  Central
+ * ---------------------------------------------------- */
+.central {
+  border-top: 1px solid #DCDDDD;
+}
+  .central > header {
+    position: relative;
+    border-bottom: 1px solid #DCDDDD;
+    margin: 0 0 20px;
+    padding: 1px 0;
+    color: #666;
+    line-height: 50px;
+  }
+    .central > header > h1 {
+      font-size: 131%;
+      background: #F3F3F3;
+      padding: 0 20px;
+    }
+    .central > header > div.count {
+      position: absolute;
+      top: 0;
+      right: 20px;
+    }
+
+
+/* ---------------------------------------------------- *
+ *  Central > Article
+ * ---------------------------------------------------- */
+.central > article {
+  position: relative;
+  padding: 20px 0 20px 120px;
+  margin: 20px 0;
+  border-bottom: 1px solid #DCDDDD;
+}
+  .central > article >:first-child {
+    font-size: 123.1%;
+    letter-spacing: 0.05em;
+  }
+  .central > article > h1 img {
+    vertical-align: middle;
+  }
+  .central > article > time {
+    position: absolute;
+    top: 0;
+    left: 120px;
+    color: #F69;
+    font-weight: bold;
+  }
+
+  /**
+   * Meta
+   */
+  .central > article > time + ul.meta {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+  }
+    .central > article > time + ul.meta li.category {
+      position: relative;
+      margin: 0 0 15px;
+    }
+      .central > article > time + ul.meta li.category li {
+        margin-bottom: 1em;
+      }
+      .central > article > time + ul.meta li.category span,
+      .central > article > time + ul.meta li.category a {
+        display: block;
+        padding: 10px 0;
+        border-radius: 7px;
+        -moz-border-radius: 7px;
+        -webkit-border-radius: 7px;
+        background: #DDD;
+        text-align: center;
+        color: #333;
+        font-weight: bold;
+      }
+      .central > article > time + ul.meta li.category span:after,
+      .central > article > time + ul.meta li.category a:after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        width: 0;
+        height: 0;
+        margin: 0 0 0 -5px;
+        border-top: 10px solid #DDD;
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+      }
+    .central > article > time + ul.meta li.author {
+      width: 100px;
+      text-align: center;
+    }
+      .central > article > time + ul.meta li.author a,
+      .central > article > time + ul.meta li.author span {
+        color: #333;
+        text-decoration: none;
+      }
+        .central > article > time + ul.meta li.author a img,
+        .central > article > time + ul.meta li.author span img {
+          margin: 0 20px;
+          border: 5px solid #DDD;
+        }
+
+  /**
+   * Textbody
+   */
+  .central > article > div.textbody {
+    margin: 10px 0 0;
+    padding: 0 0 5px;
+  }
+
+  /**
+   * Meta
+   */
+  .central > article > div.textbody + ul.meta {
+    padding: 10px 15px 17px;
+    border-radius: 7px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    background: #DDD;
+  }
+    .central > article > div.textbody + ul.meta a {
+      color: #333;
+    }
+    .central > article > div.textbody + ul.meta li.permalink {
+      display: inline;
+      margin: 0 12px 0 0;
+      padding: 0 0 0 18px;
+      background: url('../img/icon/permalink.png') 0 50% no-repeat;
+      font-size: 96%;
+    }
+    .central > article > div.textbody + ul.meta li.comment {
+      display: inline;
+      padding: 0 0 0 18px;
+      background: url('../img/icon/comment.png') 0 50% no-repeat;
+      font-size: 96%;
+    }
+    .central > article > div.textbody + ul.meta li.tag {
+      margin: 7px 0 0;
+      padding: 0 0 0 19px;
+      background: url('../img/icon/tag.png') 0 50% no-repeat;
+      font-size: 83%;
+    }
+      .central > article > div.textbody + ul.meta li.tag li {
+        display: inline;
+      }
+        .central > article > div.textbody + ul.meta li.tag li a {
+          padding: 3px 8px;
+          border-radius: 3px;
+          -moz-border-radius: 3px;
+          -webkit-border-radius: 3px;
+          background: #7D7D7D;
+          color: #FFF;
+        }
+
+
+/* ---------------------------------------------------- *
+ *  Central > nav#Paginate
+ * ---------------------------------------------------- */
+#paginate {
+  text-align: center;
+  padding: 5px 0;
+}
+  #paginate div,
+  #paginate ol,
+  #paginate ol li {
+    display: inline;
+    list-style: none;
+  }
+    #paginate a,
+    #paginate span {
+      margin: 0 -1px;
+      padding: 3px 8px;
+      border: 1px solid #DCDDDD;
+      border-radius: 5px;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      background: #DDD;
+      color: #333;
+    }
+    #paginate span {
+      background: #FFF;
+    }
+
+
+/* ----- End Of File ----- */

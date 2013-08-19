@@ -1,0 +1,140 @@
+div.userPreview {
+	width: 290px;
+}
+div.floatTipBelow {
+	padding-top: 10px;
+	background: url('../img/twitter/arrow_above.gif') no-repeat 15px top;
+}
+div.floatTipAbove {
+	padding-bottom: 10px;
+	background: url('../img/twitter/arrow_below.gif') no-repeat 15px bottom;
+}
+
+	div.userPreviewInner {
+		border: solid #ccc 4px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		width: 282px;
+		background: #fff;
+		font-size: 11px;
+		-moz-box-shadow: 2px 2px 8px #bbb;
+		-webkit-box-shadow: 2px 2px 8px #bbb;
+	}
+	div.floatTipAbove div.userPreviewInner {
+		-moz-box-shadow: 2px -2px 8px #bbb;
+		-webkit-box-shadow: 2px -2px 8px #bbb;
+	}
+
+	div.userPreviewInner a {
+		color: #3743cd !important;
+		text-decoration: underline !important;
+	}
+	div.userPreviewInner a:hover {
+		text-decoration: none !important;
+	}
+
+	div.userPreviewInner div.userData {
+		padding: 10px;
+	}
+	div.userPreviewInner div.userData { *zoom: 1 }
+	div.userPreviewInner div.userData:after { content: ''; display: block; clear: both }
+	
+		div.userPreviewInner div.userData div.userImage {
+			float: left;
+			width: 56px;
+		}
+		
+		div.userPreviewInner div.userTexts {
+			float: left;
+			width: 206px;
+		}
+		
+			div.userPreviewInner div.userTexts div {
+				padding-bottom: 3px;
+			}
+		
+			div.userPreviewInner div.userTexts div#userName {
+				font-size: 12px;
+				font-weight: bold;
+			}
+			div.userPreviewInner div.userTexts div#userScreenName {
+			}
+			div.userPreviewInner div.userTexts div#userLocation {
+			}
+		
+	div.userSubData {
+		padding: 0 10px;
+		font-weight: bold;
+	}
+	
+		div.userSubData div {
+			padding-bottom: 5px;
+		}
+			div.userSubData div span {
+				margin-left: 5px;
+				font-weight: normal;
+			}
+
+	div.userPreviewInner ul#userStatus {
+		padding: 10px;
+	}
+	div.userPreviewInner ul#userStatus { /zoom: 1 }
+	div.userPreviewInner ul#userStatus:after { content: ''; display: block; clear: both }	
+
+		div.userPreviewInner ul#userStatus li {
+			float: left;
+			margin-right: 5px;
+			width: 58px;
+			border-right: solid #ccc 1px;
+		}
+		
+			div.userPreviewInner ul#userStatus li span {
+				display: block;
+				font-weight: bold;
+				font-size: 12px;
+			}
+	
+		div.userPreviewInner ul#userStatus li.userTweets {
+			width: 43px;
+		}
+			div.userPreviewInner ul#userStatus li.userTweets span#userTweets {
+			}
+			
+		div.userPreviewInner ul#userStatus li.userFollowing {
+		}
+			div.userPreviewInner ul#userStatus li.userFollowing span#userFollowing {
+			}
+			
+		div.userPreviewInner ul#userStatus li.userFollowers {
+		}
+			div.userPreviewInner ul#userStatus li.userFollowers span#userFollowers {
+			}
+			
+		div.userPreviewInner ul#userStatus li.userFavourites {
+			border-right: none;
+		}
+			div.userPreviewInner ul#userStatus li.userFavourites span#userFavourites {
+			}
+			
+	/* loading */
+	div.loadingInner {
+		border: solid #ccc 4px;
+		-moz-border-radius: 5px;
+		padding: 10px;
+		width: 130px !important;
+		background: #fff;
+		font-size: 11px;
+		-moz-box-shadow: 2px -2px 8px #bbb;
+		-webkit-box-shadow: 2px -2px 8px #bbb;
+	}
+	div.floatTipBelow div.loadingInner {
+		-moz-box-shadow: 2px 2px 8px #bbb;
+		-webkit-box-shadow: 2px 2px 8px #bbb;
+	}
+		
+			div.loading div.loadingInner div.text {
+				padding-left: 20px;
+				background: url('../img/twitter/loading.gif') no-repeat left center;
+				font-weight: bold;
+				font-size: 12px;
+			}

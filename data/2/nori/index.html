@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<title>ゆるふわ愛され基礎jQuery</title>
+<link rel="stylesheet" href="css/common.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery.presentation.js"></script>
+<script src="js/whatinout.js"></script>
+</head>
+<body>
+
+<div class="mod-page top"><div>
+	<h1>ゆるふわ愛され基礎jQuery</h1>
+	<p>nori(norimania@gmail.com)</p>
+</div></div>
+
+<div class="mod-page shout"><div>
+	<p>jQueryってなに…///</p>
+	<p class="img"><img src="imgs/p4hugajfaewd.png" alt="altめんどいわー" width="214" height="272" /></p>
+</div></div>
+
+<div class="mod-page plain"><div>
+	<h2>jQueryってなに…///</h2>
+	<ul>
+		<li>JavaScriptの神フレームワークだよ…///</li>
+		<li>クロスブラウザ対応？いいよ…///</li>
+		<li>超短コードであんなことやそんなことまで…///</li>
+		<li>リファレンスが豊富…///</li>
+		<li>豊富なプラグインであっという間に…///</li>
+	</ul>
+</div></div>
+
+<div class="mod-page shout"><div>
+	<p>HTMLとCSSをいじって<br />
+	あんな動きや<br />
+	そんな動きまで…///</p>
+</div></div>
+
+<div class="mod-page shout"><div>
+	<p>とりあえず触ろう…？///</p>
+	<p class="img"><img src="imgs/p4hugajfaewd.png" alt="altめんどいわー" width="214" height="272" /></p>
+</div></div>
+
+<div class="mod-page plain"><div>
+	<h2>jQueryをダウンロードする</h2>
+	<p>サイトからダウンロードすればいいよ<br />
+	<a href="http://jquery.com/">http://jquery.com/</a></p>
+	<p><img src="imgs/jquery_download.png" alt="alt入れんのメンドイ" /></p>
+</div></div>
+
+<div class="mod-page plain"><div>
+	<h2>ソースを保存する</h2>
+	<p><img src="imgs/jquery_source.png" alt="alt入れんのメンドイ" /></p>
+	<p>ソースが表示されたらテキトーな名前で保存する<br />
+	一応おすすめは<strong>jquery.js</strong>です</p>
+</div></div>
+
+<div class="mod-page plain"><div>
+	<h2>なんかやってみるよ･･･///</h2>
+	<p class="actionbtn"><input id="ac-nanika1" type="button" value="なにかがおこるかも･･･///" /></p>
+	<div class="field">
+		<div id="nanika1"></div>
+		<script type="text/javascript">
+			$('#ac-nanika1').click(function() {
+				$('#nanika1').append(
+					'<p><img src="imgs/p4hugajfaewd.png" alt="altめんどいわー" width="100" /></p>'
+				);
+				$('p', '#nanika1').css('position', 'relative').animate({
+					top: 200,
+					left: 200
+				}, 500)
+				.delay(100)
+				.animate({
+					top: 0,
+					left: 0
+				}, 500)
+			});
+		</script>
+	</div>
+</div></div>
+
+<div class="mod-page plain"><div>
+	<h2>まーそんなわけで</h2>
+	<p>テキストの追加も簡単にできるよ</p>
+	<pre>$('#ac-nanika1').click(function() {
+	$('#nanika1').append(
+		'&lt;p&gt;&#25276;&#12373;&#12394;&#12356;&#12391;&#65381;&#65381;&#65381;///&lt;/p&gt;'
+	);
+});</pre>
+</div></div>
+
+<div class="mod-page plain"><div>
+	<h2>その他にも！</h2>
+	<p class="actionbtn"><input id="ac-nanika2" type="button" value="なにかがおこるかも！" /></p>
+	<div class="field">
+		<div id="nanika2"></div>
+		<script type="text/javascript">
+			$('#ac-nanika2').click(function() {
+				$('#nanika2')
+					.css({
+						width: 300,
+						height: 300,
+						background: '#f00',
+						position: 'relative'
+					})
+					.slideUp()
+					.delay(100)
+					.slideDown()
+					.delay(100)
+					.animate({
+						top: 300,
+						width: 600
+					},{
+						duration: 500
+					})
+					.delay(100)
+					.animate({
+						top: 0,
+						left: 300,
+						width: 300,
+						height: 600
+					},{
+						duration: 500,
+						complete: function() {
+							
+						}
+					})
+					.delay(100)
+					.animate({
+						left: 0,
+						height: 300
+					},{
+						duration: 500
+					})
+			});
+		</script>
+	</div>
+</div></div>
+
+<div class="mod-page plain"><div>
+	<h2>みたいなアニメーションも思いのまま</h2>
+	<p>ソースが長くて見切れた･･･</p>
+	<pre>$('#ac-nanika2').click(function() {
+	$('#nanika2')
+		.css({
+			width: 300,
+			height: 300,
+			background: '#f00',
+			position: 'relative'
+		})
+		.slideUp()
+		.delay(100)
+		.slideDown()
+		.delay(100)
+		.animate({
+			top: 300,
+			width: 600
+		},{
+			duration: 500
+		})
+		.delay(100)
+		.animate({
+			top: 0,
+			left: 300,
+			width: 300,
+			height: 600
+		},{
+			duration: 500,
+			complete: function() {
+				
+			}
+		})
+		.delay(100)
+		.animate({
+			left: 0,
+			height: 300
+		},{
+			duration: 500
+		})
+});
+</pre>
+</div></div>
+
+<div class="mod-page plain"><div>
+	<h2>ちょっと関心したところで</h2>
+	<p>勉強していきましょー</p>
+</div></div>
+
+<div class="mod-page plain"><div>
+	<h2>jQueryを使うときの基本的な流れ</h2>
+	<ol>
+		<li>要素をセレクタで取得</li>
+		<li>取得した要素に対して<strong>メソッド</strong>で何かする</li>
+		<li>やりたいだけやる</li>
+		<li>とにかくやる</li>
+	</ol>
+	<p>またはプラグインを使うのもありますね</p>
+	<p>順番にみていきましょう</p>
+</div></div>
+
+<div class="mod-page shout"><div>
+	<p>jQueryを使うときは</p>
+</div></div>
+
+<div class="mod-page plain"><div>
+	<h2>これの中に書きますおぼえてね</h2>
+	<pre>jQuery(function($) {
+ // hogehoge
+});</pre>
+</div></div>
+
+<div class="mod-page plain"><div>
+	<h2>簡単なさんぷる</h2>
+	<pre>jQuery(function($) {
+	$('#alert').click(function() {
+		alert('dotcoder');
+	});
+});</pre>
+	<p class="actionbtn">
+		<input id="alert" type="button" value="GOGOGOGOGOGOGOGOGOGOGOGGG" />
+	</p>
+	<div class="field">
+		<script type="text/javascript">
+			jQuery(function($) {
+				$('#alert').click(function() {
+					alert('dotcoder');
+				});
+			});
+		</script>
+	</div>
+</div></div>
+
+<div class="mod-page shout"><div>
+	<p>要素をセレクタで取得</p>
+</div></div>
+
+<div class="mod-page plain"><div>
+	<h2>たとえば</h2>
+	<pre>&lt;input type=&quot;button&quot; id=&quot;button&quot; value=&quot;&#12412;&#12387;&#12383;&#12540;&#12435;&#65281;&quot; /&gt;</pre>
+	<p>このボタンを選択するには</p>
+	<pre class="em">$('#button')</pre>
+	<p>こうするだけ</p>
+</div></div>
+
+<div class="mod-page shout"><div>
+	<p>何かに似てますね</p>
+</div></div>
+
+<div class="mod-page shout"><div>
+	<p>なんかこんな。。</p>
+	<p class="img"><img src="imgs/h4pgfja.png" alt="altとかないわー" width="343" height="389" /></p>
+</div></div>
+
+<div class="mod-page plain"><div>
+	<h2>CSSセレクタがつかえるっすよ</h2>
+	<p>超簡単す</p>
+	<pre>$('div') // div全部
+$('div.hoge') // div.hoge全部
+$('div#hoge') // div#hoge
+$('div > a') // div > a
+$('div > a:first-child') // div > a:first-child
+$('input[type="text"]') // inputのtypeがtextのやつ</pre>
+	<p>とかCSSセレクタで選択できるすよ<br />
+	色々使えるからリファレンス見てね</p>
+	<p><a href="http://semooh.jp/jquery/">jQuery日本語リファレンス</a></p>
+</div></div>
+
+<div class="mod-page shout"><div>
+	<p>メソッドってなにさ</p>
+</div></div>
+
+<div class="mod-page shout"><div>
+	<p>要素に対する命令</p>
+</div></div>
+
+<div class="mod-page plain"><div>
+	<h2>簡単な例</h2>
+	<pre>$(hoge).slideUp();
+//     ↑.slideUp() のとこ</pre>
+	<p>要素に対して「.(ドット)」で<br />
+	実行したいメソッドを繋いでいくだけ</p>
+	<p>例えば一回スライドアップしてスライドダウンさせたいときは</p>
+	<pre>$(hoge)
+	.slideUp()
+	.delay(100)
+	.slideDown();</pre>
+	<p>こんな感じ</p>
+</div></div>
+
+<div class="mod-page plain"><div>
+	<h2>要素を操作するようなメソッドの例</h2>
+	<pre>.show() // display: none の要素を表示する
+.hide() // .show()の逆
+.slideDown() // スライドして表示する
+.slideUp() // スライドして非表示にする
+.fadeIn() // フェードインして表示する
+.fadeOut() // フェードアウトして非表示にする
+.animate() // アニメーション、色々指定できるよ
+.append(hoge) // hogeを追加する
+.after(hoge) // 後ろにhogeを追加する
+.before(hoge) // 前にhogeを追加する
+.css({ css }) // CSSを指定する、指定方法はCSSとほぼ同じ</pre>
+<p>とか、簡単ですね</p>
+</div></div>
+
+<div class="mod-page plain"><div>
+	<h2>全部やってみましょか</h2>
+	<p class="actionbtn">
+		<input id="show" type="button" value="show()" />
+		<input id="hide" type="button" value="hide()" />
+		<input id="slideDown" type="button" value="slideDown()" />
+		<input id="slideUp" type="button" value="slideUp()" />
+		<input id="fadeIn" type="button" value="fadeIn()" />
+		<input id="fadeOut" type="button" value="fadeOut()" />
+		<input id="animate" type="button" value="animate()" />
+		<input id="append" type="button" value="append(hoge)" />
+		<input id="after" type="button" value="after(hoge)" />
+		<input id="before" type="button" value="before(hoge)" />
+		<input id="css" type="button" value="css({css})" />
+	</p>
+	
+	<div class="field">
+		<div id="hogehoge">こいつをあーだこーだ</div>
+		<script type="text/javascript">
+			$('#hogehoge').css({
+				width: 300,
+				height: 300,
+				background: '#00f'
+			}).hide();
+			
+			$('#show').click(function() {
+				$('#hogehoge').show();
+			})
+			$('#hide').click(function() {
+				$('#hogehoge').hide();
+			})
+			$('#slideDown').click(function() {
+				$('#hogehoge').slideDown();
+			})
+			$('#slideUp').click(function() {
+				$('#hogehoge').slideUp();
+			})
+			$('#fadeIn').click(function() {
+				$('#hogehoge').fadeIn();
+			})
+			$('#fadeOut').click(function() {
+				$('#hogehoge').fadeOut();
+			})
+			$('#animate').click(function() {
+				$('#hogehoge').show()
+					.animate({
+						width: 600,
+						height: 100,
+						opacity: .1
+					}, 500)
+					.delay(300)
+					.animate({
+						width: 300,
+						height: 300,
+						opacity: 1
+					}, 500)
+			})
+			$('#append').click(function() {
+				$('#hogehoge').append('hoge');
+			})
+			$('#after').click(function() {
+				$('#hogehoge').after('<p>hoge</p>');
+			})
+			$('#before').click(function() {
+				$('#hogehoge').before('<p>hoge</p>');
+			})
+			$('#css').click(function() {
+				$('#hogehoge').css({
+					width: 600,
+					height: 600,
+					background: '#f00'
+				});
+			})
+		</script>
+	</div>
+
+</div></div>
+
+<div class="mod-page plain"><div>
+	<h2>要素にイベントを追加するメソッドの例</h2>
+	<pre>.click(hoge) // クリックイベントを追加
+.dblclick(hoge) // ダブルクリックイベントを追加
+.hover(hoge,fuga) // マウスオーバーアウトイベントを追加</pre>
+	<p>とか、こっちも簡単ですね</p>
+	<p>色々使えるからリファレンス見てね</p>
+	<p><a href="http://semooh.jp/jquery/">jQuery日本語リファレンス</a></p>
+</div></div>
+
+<div class="mod-page plain"><div>
+	<h2>さーんぷる</h2>
+	<div class="field">
+		<div id="fuga">.click(hoge)</div>
+		<div id="hogefuga">.dblclick(hoge)</div>
+		<div id="piyo">.hover(hoge,fuga)</div>
+		<script type="text/javascript">
+			$('#fuga, #hogefuga, #piyo').css({
+				marginBottom: 15,
+				width: 300,
+				height: 100,
+				background: '#f00'
+			})
+			$('#fuga').click(function() {
+				$(this).css('background', '#00f');
+			})
+			$('#hogefuga').dblclick(function() {
+				$(this).append('<strong>piyopiyo</strong>');
+			})
+			$('#piyo').hover(function() {
+				$(this).css('opacity', .1)
+			}, function() {
+				$(this).css('opacity', 1)
+			})
+		</script>
+	</div>
+	<p>簡単すね！</p>
+</div></div>
+
+<div class="mod-page shout"><div>
+	<p>プラグインをつかーう！</p>
+</div></div>
+
+<div class="mod-page shout"><div>
+	<p>プラグインってなに（・ω・｀；）</p>
+</div></div>
+
+<div class="mod-page plain"><div>
+	<h2>ぷるぎん</h2>
+	<ul>
+		<li>jQuery本体にないメソッド</li>
+		<li>jQueryのあとに読み込むと使える</li>
+		<li>便利なぷるぎんがたくさん！</li>
+		<li>しかも無料で！</li>
+	</ul>
+</div></div>
+
+<div class="mod-page shout"><div>
+	<p>そう、jQueryならね！</p>
+	<p class="img"><img src="imgs/jquery-logo.png" alt="jquery-logo" width="268" height="268" /></p>
+</div></div>
+
+<div class="mod-page plain"><div>
+	<h2>ふわっと表示させるプラグインをつかってみよー</h2>
+	<p>1. <a href="http://5509.me/log/whatinout">http://5509.me/log/whatinout</a>からダウンロード</p>
+	<p>2. ソースを読み込む</p>
+	<pre>&lt;script type=&quot;text/javascript&quot; src=&quot;js/whatinout.js&quot;&gt;&lt;/script&gt;</pre>
+	<p>3. 準備かんりょー！</p>
+	<p>4. つかってみる！</p>
+</div></div>
+
+<div class="mod-page plain"><div>
+	<h2>ふわっとさせる</h2>
+	<p class="actionbtn">
+		<input id="whatIn" type="button" value="whatIn()" />
+		<input id="whatOut" type="button" value="whatOut()" />
+		<input id="whatSlideIn" type="button" value="whatSlideIn()" />
+		<input id="whatSlideOut" type="button" value="whatSlideOut()" />
+	</p>
+	
+	<div class="field">
+		<div id="piyopiyo">ふわっとふわふわ</div>
+		<script type="text/javascript">
+			$('#piyopiyo').css({
+				width: 300,
+				height: 300,
+				background: '#00f'
+			}).hide();
+			
+			$('#whatIn').click(function() {
+				$('#piyopiyo').whatIn();
+			})
+			$('#whatOut').click(function() {
+				$('#piyopiyo').whatOut();
+			})
+			$('#whatSlideIn').click(function() {
+				$('#piyopiyo').whatSlideIn();
+			})
+			$('#whatSlideOut').click(function() {
+				$('#piyopiyo').whatSlideOut();
+			})
+		</script>
+	</div>
+</div></div>
+
+<div class="mod-page shout"><div>
+	<p>プラグイン簡単！<br />どんどん使おう！</p>
+</div></div>
+
+<div class="mod-page shout"><div>
+	<p>とにかく使って慣れよう</p>
+</div></div>
+
+<div class="mod-page shout"><div>
+	<p>ありがとうございました。</p>
+</div></div>
+
+<hr />
+
+<ul class="mod-pager" id="pager"> <li id="pager-L"><a href="#">L</a></li> <li id="pager-R"><a href="#">R</a></li> </ul>
+<p class="mod-pageNum" id="pageNum"> <span class="current" id="pageNum-current">0</span> / <span class="total" id="pageNum-total">0</span> </p>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<aside class="sidebar">
+
+  <section id="recentEntries" class="two">
+    <h2>Recent Entries</h2>
+    <ul>
+    {% for post in site.posts limit: 5 %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+    </ul>
+  </section>
+
+{% comment %}
+  <section id="categories" class="one">
+    <h2>Categories</h2>
+    <ul>
+      <li><a href="/category/info">お知らせ</a> [10]</li>
+      <li><a href="/category/slide">スライド</a> [4]</li>
+      <li><a href="/category/history">活動記録</a> [6]</li>
+    </ul>
+  </section>
+
+  <section id="archives" class="two">
+    <h2>Archives</h2>
+    <ul>
+      <li>Pending...</li>
+    </ul>
+  </section>
+
+  <ul class="others">
+    <li><a href="//twitter.com/{{ site.twitter }}">Follow me</a></li>
+    <li><a href="{{ site.baseurl }}/atom.xml">The Feed</a></li>
+  </ul>
+
+  <section id="links">
+    <h2>Links</h2>
+    <ul>
+      <li>Pending...</li>
+    </ul>
+  </section>
+{% endcomment %}
+
+</aside>

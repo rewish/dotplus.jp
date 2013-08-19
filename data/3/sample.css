@@ -1,0 +1,736 @@
+
+html,body{
+	margin:0;
+	padding:0;
+}
+
+body{
+	border-top:3px solid #f7370b;
+	font-family:"Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size:85%;
+	line-height:1;
+	color:#623f37;
+	background:#f3f1ed;
+}
+
+header,footer,article,aside,nav,section,hgroup,figure,figcaption{ display:block; }
+
+a{
+	color:#623f37;
+	text-decoration:none;
+}
+
+a:hover{
+	color:#623f37;
+	text-decoration:underline;
+}
+
+img{
+	vertical-align:top;
+}
+
+a img{
+	border:0;
+}
+
+
+header{ /* clear */
+	position:relative;
+	width:940px;
+	margin:0 auto 40px;
+	padding:0;
+}
+
+	header hgroup{
+		position:relative;
+		float:left;
+		width:250px;
+		margin:40px 0;
+		padding:0.5em 0 0;
+	}
+	
+		header hgroup h1{
+			font-family:'Comic Sans MS';
+			font-weight:bold;
+			font-size:70px;
+			color:#f7370b;
+			text-shadow:#ffba00 3px 3px 0;
+			margin:0;
+			padding:0;
+		}
+		
+		header hgroup h2{
+			position:absolute;
+			top:0;
+			left:0;
+			width:210px;
+			font-size:75%;
+			letter-spacing:1em;
+			text-align:center;
+			margin:0;
+			padding:0 0 0 1em;
+		}
+		
+	header ul{ /* clear */
+		position:absolute;
+		top:75px;
+		right:210px;
+		list-style-type:none;
+		margin:0;
+		padding:0;
+	}
+
+		header ul li{
+			float:left;
+			margin:0 0 0 20px;
+			padding:0;
+		}
+		
+			header ul li a{
+				padding:0 0 0 18px;
+				background:url(img/arrow.png) no-repeat left center;
+			}
+		
+	header form{
+		position:absolute;
+		top:73px;
+		right:0;
+		margin:0;
+		padding:0;
+	}
+	
+		header form dl{ /* clear */
+			width:195px;
+			margin:0;
+			padding:0;
+		}
+
+			header form dl dt{
+				float:left;
+				margin:0;
+				padding:0;
+			}
+			
+				header form dl dt input{
+					width:175px;
+					height:20px;
+					line-height:1;
+					border:0;
+					margin:0;
+					padding:0;
+					vertical-align:bottom;
+				}
+			
+			header form dl dd{
+				float:left;
+				width:20px;
+				height:20px;
+				margin:0;
+				padding:0;
+			}
+			
+				header form dl dd input{
+					width:20px;
+					height:20px;
+					text-indent:-9999px;
+					border:0;
+					background:url(img/btn_search.png) no-repeat right center;
+					margin:0;
+					padding:0;
+				}
+			
+	header nav{
+		clear:both;
+	}
+	
+		header nav ul{
+			position:static;
+			margin:0;
+			padding:0;
+		}
+				
+			header nav ul li{
+				float:left;
+				width:187px;
+				margin:0;
+				padding:0;
+				border-right:1px solid #f87456;
+			}
+			
+			header nav ul li:first-child{
+				width:188px;
+			}
+			
+			header nav ul li:last-child{
+				border:0;
+			}
+			
+				header nav ul li a{
+					display:block;
+					height:45px;
+					line-height:45px;
+					color:#fff;
+					text-decoration:none;
+					font-weight:bold;
+					background:#f7370b;
+					text-align:center;
+					padding:0;
+					border-right:1px solid #cb2c07;
+				}
+				
+				header nav li a:hover{
+					color:#fff;
+					background:#f85733;
+					text-decoration:none;
+				}
+				
+				header nav li:first-child a{
+					-webkit-border-top-left-radius:6px;
+					-webkit-border-bottom-left-radius:6px;
+				}
+
+				header nav li:last-child a{
+					-webkit-border-top-right-radius:6px;
+					-webkit-border-bottom-right-radius:6px;
+					border:0;
+				}
+				
+footer{
+	padding:0 0 60px;
+	background:#49443e;
+}
+
+	footer ul{ /* clear */
+		list-style-type:none;
+		float:left;
+		margin:0;
+		padding:0;
+	}
+	
+		footer ul li{
+			float:left;
+			margin:0;
+			padding:0 20px;
+		}
+		
+	footer p{
+		float:right;
+	}
+
+	footer #footNavWrapper{
+		margin:0;
+		padding:0;
+		background:#d3cbbf;	
+	}
+	
+		footer #footNavWrapper #footNav{ /* clear */
+			width:940px;
+			margin:0 auto;
+			padding:0.8em 0;
+		}
+		
+				footer #footNav ul li{
+					border-left:1px solid #e7e2da;
+					border-right:1px solid #aba397;
+				}
+				
+				footer #footNav ul li:first-child{
+					padding:0 20px 0 0;
+					border-left:0;
+				}
+				
+				footer #footNav ul li:last-child{
+					padding:0 0 0 20px;
+					border-right:0;
+				}
+								
+					footer #footNav ul li a{
+						display:inline-block;
+						padding:0.2em 0;
+					}
+			
+			footer #footNav p{
+				margin:0;
+				padding:0;
+			}
+			
+				footer #footNav p a{
+					display:inline-block;
+					padding:0.2em 0 0.2em 20px;
+					background:url(img/arrow_top.png) no-repeat left center;
+				}
+				
+	footer #siteInfomation{ /* clear */
+		width:940px;
+		margin:0 auto;
+		padding:0.8em 0 0;
+	}
+	
+		footer #siteInfomation ul li{
+			border-left:1px solid #676058;
+			border-right:1px solid #302d28;
+		}
+		
+		footer #siteInfomation ul li:first-child{
+			padding:0 20px 0 0;
+			border-left:0;
+		}
+		
+		footer #siteInfomation ul li:last-child{
+			padding:0 0 0 20px;
+			border-right:0;
+		}
+		
+			footer #siteInfomation ul li a{
+				display:inline-block;
+				color:#fff;
+				padding:0.2em 0;
+			}
+			
+		footer #siteInfomation p{
+			margin:0.2em 0 0;
+			padding:0;
+		}
+		
+			footer #siteInfomation small{
+				font-size:90%;
+				color:#fff;
+			}
+
+#wrapper{ /* clear */
+	width:940px;
+	margin:0 auto 4em;
+	padding:0;
+}
+
+#wrapper > nav{
+	float:left;
+	width:210px;
+	margin:0 0 40px;
+}
+
+	#wrapper nav h2{
+		margin:0;
+		padding:0;
+		font-size:110%;
+	}
+
+		#wrapper nav h2 a{
+			display:block;
+			color:#fff;
+			height:50px;
+			line-height:50px;
+			padding:0 20px;
+			background:#ffba00;
+			-webkit-border-top-left-radius:6px;
+			-webkit-border-top-right-radius:6px;
+		}
+		
+		#wrapper nav h2 a:hover{
+			text-decoration:none;
+			background:#fdc326;
+		}
+	
+	#wrapper nav ul{
+		list-style-type:none;
+		margin:0;
+		padding:0;
+	}
+	
+		#wrapper nav ul li{
+			margin:0;
+			padding:0;
+		}
+		
+			#wrapper nav ul li a{
+				display:block;
+				padding:1em 0 1em 40px;
+				background:#fff url(img/arrow_local.png) no-repeat 20px center;
+				border:1px solid #fdc326;
+				border-top:0;
+			}
+			
+			#wrapper nav ul li:last-child a{
+				-webkit-border-bottom-left-radius:6px;
+				-webkit-border-bottom-right-radius:6px;
+			}
+			
+			#wrapper nav ul li a:hover{
+				text-decoration:none;
+				background-color:#fffaec;
+			}
+			
+#wrapper > aside{
+	float:left;
+	width:210px;
+}
+
+	#wrapper > aside ul{
+		list-style-type:none;
+		margin:0;
+		padding:0;
+	}
+	
+		#wrapper > aside ul li{
+			margin:0 0 10px;
+			padding:0;
+		}
+		
+article{
+	float:right;
+	width:690px;
+	margin:0;
+	padding:0;
+}
+
+	article *{
+		line-height:1.6;
+	}
+
+	article nav{
+		margin:0 0 2em;
+	}
+	
+		article nav ol{ /* clear */
+			list-style-type:none;
+			font-size:90%;
+			margin:0;
+			padding:0.5em 15px;
+			background:#d3cbbf;
+			-webkit-border-radius:6px;
+		}
+		
+			article nav ol li{
+				float:left;
+				margin:0 10px 0 0;
+				padding:0;
+			}
+			
+				article nav li a{
+					text-decoration:underline;
+					padding:0 14px 0 0;
+					background:url(img/arrow_topicpath.png) no-repeat right center;
+				}
+				
+				article nav li a:hover{
+					text-decoration:none;
+				}
+				
+	article h2{
+		font-size:100%;
+		padding:0 10px 0.5em;
+		margin:0 0 1.5em;
+		border-bottom:2px solid #f7370b;
+	}
+	
+	article h3{
+		font-size:100%;
+		color:#fff;
+		padding:0.3em 10px;
+		margin:0 0 1.5em;
+		background:#ffba00;
+		-webkit-border-radius:6px;
+	}
+	
+	article > section{ /* clear */
+		margin:0 0 2.5em;
+	}
+	
+		article #product dl.date{
+			margin:0 0 1em;
+			padding:0;
+			text-align:right;
+		}
+		
+			article #product dl.date dt{
+				float:none;
+				display:inline;
+				color:#623f37;
+				font-weight:normal;
+				margin:0;
+				padding:0;
+				background:none;
+			}
+			
+			article #product dl.date dd{
+				display:inline;
+				margin:0;
+				padding:0;
+			}
+		
+		article figure{
+			float:right;
+			margin:0 0 1em 20px;
+			padding:0;
+		}
+		
+			article figure figcaption{
+				text-align:center;
+				margin:0.5em 0 0;
+			}
+			
+				article figure figcaption small{
+					font-size:90%;
+				}
+				
+		article p{
+			margin:0 0 1em;
+		}
+		
+		article em{
+			font-style:normal;
+			font-weight:bold;
+		}
+		
+		article strong{
+			color:#f7370b;
+			font-weight:bold;
+		}
+		
+		article p strong{
+			display:block;
+			text-indent:-1em;
+			padding-left:1em;
+		}
+		
+		article #product > dl{ /* clear */
+			margin:2em 0 0.5em;
+			padding:0;
+		}
+		
+			article #product > dl dt{
+				float:left;
+				clear:left;
+				min-width:60px;
+				color:#fff;
+				text-align:center;
+				padding:0.2em 10px;
+				background:#ffba00;
+				-webkit-border-radius:6px;
+			}
+			
+				article #product dl dd{
+					margin:0 0 0.7em;
+					padding:0.2em 0 0.2em 7em;
+				}
+				
+					article #product dl dd em{
+						color:#f7370b;
+					}
+					
+	article #movie{
+		padding:10px 25px;
+		margin:4em 0 3em;
+		border:1px solid #bcb5aa;
+		-webkit-border-radius:6px;
+	}
+	
+		article #movie h4{
+			font-size:120%;
+			color:#623f37;
+			margin:0 -15px 1.5em;
+			padding:0.4em 15px;
+			background:#d3cbbf;
+		}
+		
+			article #movie video{
+				float:left;
+				margin:0 30px 1em 0;
+			}
+		
+			article #movie p{
+				margin:2.5em 0 1em;
+			}
+			
+	article #voice{
+		padding:20px;
+		margin:0 0 3em;
+		background:#d3cbbf;
+		-webkit-border-radius:6px;
+	}
+	
+		article #voice h4{
+			font-size:120%;
+			color:#623f37;
+			padding:0 0 0 32px;
+			margin:0 0 1em;
+			background:url(img/icon_voice.png) no-repeat left center;
+		}
+		
+		article #voice dl{
+			position:relative;
+			margin:0;
+			padding:0 0 1.2em;
+		}
+		
+			article #voice dl dt{
+				width:100%;
+				position:absolute;
+				left:0;
+				bottom:0;
+				text-align:right;
+			}
+			
+				article #voice dl dt cite{
+					font-style:normal;
+				}
+			
+			article #voice dl dd{
+				margin:0;
+				padding:0;
+			}
+			
+				article #voice dl dd blockquote{
+					margin:0;
+					padding:0;
+				}
+				
+					article #voice dl dd blockquote h1{
+						font-size:110%;
+						margin:0 0 0.5em;
+						padding:0;
+					}
+					
+						article #voice dl dd mark{
+							font-weight:bold;
+							background:none;
+						}
+		
+	article #inquiry{
+		margin:0 0 1em;
+		padding:30px;
+		border:1px solid #f7370b;
+		background:#fff;
+		-webkit-border-radius:6px;
+	}
+	
+		article #inquiry h4{
+			color:#f7370b;
+			margin:0 0 1em;
+			padding:0.2em 0 0.2em 30px;
+			background:url(img/icon_inquiry.png) no-repeat left center;
+		}
+		
+		article #inquiry address{ /* clear */
+			display:block;
+			font-style:normal;
+			margin:0;
+			padding:0;
+		}
+		
+			article #inquiry address p{
+				float:left;
+				width:48%;
+				margin:0;
+			}
+			
+			article #inquiry address dl{ /* clear */
+				float:right;
+				width:48%;
+				margin:0;
+				padding:0;
+			}
+			
+				article #inquiry address dl dt{
+					float:left;
+					clear:left;
+					text-align:center;
+					min-width:55px;
+					margin:0;
+					padding:0.2em 5px;
+					background:#d3cbbf;
+					-webkit-border-radius:6px;
+				}
+				
+				article #inquiry address dl dd{
+					font-weight:bold;
+					font-size:130%;
+					letter-spacing:0.1em;
+					margin:0 0 0.5em;
+					padding:0 0 0 4.5em;
+				}
+				
+				article #inquiry address dl dd:last-of-type{
+					margin:0;
+				}
+				
+					article #inquiry address dl dd a{
+						color:#623f37;
+						text-decoration:none;
+					}
+					
+					article #inquiry address dl dd a:hover{
+						text-decoration:underline;
+					}
+					
+	article aside{
+		margin:5em 0 2em;
+	}
+	
+		article aside ul{
+			list-style-type:none;
+			margin:0 0 1em;
+			padding:0;
+			display:-webkit-box;
+		}
+		
+			article aside ul li{
+				width:210px;
+				-webkit-box-sizing:border-box;
+				margin:0 30px 1em 0;
+				border:1px solid #bcb5aa;
+				background:#d3cbbf;
+			}
+			
+			article aside ul li:last-child{
+				margin:0 0 1em;
+			}
+			
+				article aside ul li dl{
+					margin:0;
+					padding:0;
+				}
+				
+					article aside ul li dl dt{
+						margin:0;
+						padding:0;
+						border-bottom:1px solid #bcb5aa;
+					}
+					
+					article aside ul li dl dd{
+						line-height:1.4;
+						font-size:90%;
+						margin:0;
+						padding:1em 20px;
+					}
+					
+						article aside ul li dl dd a{
+							display:inline-block;
+							padding:0 0 0 20px;
+							background:url(img/arrow.png) no-repeat left 0.2em;
+							text-decoration:underline;
+						}
+						
+						article aside ul li dl dd a:hover{
+							text-decoration:none;
+						}
+		
+header:after,
+header ul:after,
+header form dl:after,
+footer ul:after,
+footer #footNavWrapper #footNav:after,
+footer #siteInfomation:after,
+#wrapper:after,
+article nav ol:after,
+article section:after,
+article #product dl:after
+article #inquiry address:after,
+article #inquiry address dl:after{
+	content:'.';
+	display:block;
+	height:0;
+	visibility:hidden;
+	clear:both;
+}
+

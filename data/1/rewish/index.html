@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Language" content="ja" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="imagetoolbar" content="no" />
+<title>Greasemonkeyで楽しくJS学習</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" media="all" href="./css/default.css" />
+<link rel="stylesheet" type="text/css" media="all" href="./css/base.css" />
+<script type="text/Javascript" src="./js/lib/jquery.min.js"></script>
+<script type="text/Javascript" src="./js/mukiSlide.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+jQuery(function($){
+    // デフォルトはshow、設定出来るのはfadeIn、slideDown
+    $.mukiSlide({ motion: 'slideDown' });
+});
+// ]]>
+</script>
+</head>
+<body>
+<div id="content">
+    <div class="section cover">
+        <h1>Greasemonkeyで楽しくJS学習</h1>
+        <p class="image"><img src="mukimuki.png" alt ="mukimuki" title="mukimuki" width="125" height="125" /></p>
+    </div>
+    <div class="section">
+        <h2>自己紹介</h2>
+        <p class="image"><img src="photo_big.jpg" alt ="photo_big" title="photo_big" width="90" height="90" /></p>
+        <ul>
+			<li>rewish または rew で活動してます</li>
+			<li>HTMLとかCSSとかJavaScriptとかPHPとかサーバー周りとか色々やってます</li>
+			<li>JavaScriptを本格的に始めたのは2009年の5月末</li>
+			<li>ブログ: <a href="http://rewish.org/">http://rewish.org/</a></li>
+			<li>Twitter:  <a href="http://twitter.com/rewish">http://twitter.com/rewish</a></li>
+        </ul>
+    </div>
+    <div class="section">
+        <h2>Greasemonkeyをオススメする5つの理由</h2>
+        <ul>
+            <li>書き始めるのが楽</li>
+            <li>手段が目的にならない</li>
+            <li>あのブラウザに対応しなくて良い</li>
+            <li>作ったものは後で使える</li>
+            <li>公開すれば誰かを幸せに出来る</li>
+        </ul>
+    </div>
+    <div class="section separate">
+        <h2>書き始めるのが楽</h2>
+        <p>JavaScriptを学習するのにHTMLを書くのは面倒。</p>
+        <p>Greasemonkeyなら右クリックして新規ユーザースクリプトを作成するだけ！</p>
+        <p class="image"><img src="ss1.png" alt ="photo_big" title="photo_big" /></p>
+    </div>
+    <div class="section separate">
+        <h2>手段が目的にならない</h2>
+        <p>勉強しようとするとJavaScriptを書くことが目的になりますよね。</p>
+        <p>でもコレ、(僕は)正直つまらないです。</p>
+        <p>JavaScriptは手段！</p>
+        <p>既存サイトをより便利に！</p>
+        <p>便利にすることを目的にJavaScriptを書く！</p>
+    </div>
+    <div class="section separate">
+        <h2>あのブラウザに対応しなくて良い</h2>
+        <p>HTML/CSS周りでも大変ヤンチャなあのブラウザ</p>
+        <p class="image"><img src="ie.png" alt ="ie" title="ie" /></p>
+        <p>JavaScriptでもヤンチャですよね・・・</p>
+        <p>でもGreasemonkeyで書く場合はFirefoxのことだけを考えれば良いのです！</p>
+        <p>document.querySelector (CSSセレクタでDOMを取得) とかも使い放題！</p>
+        <p>なんと言うパラダイス！</p>
+        <p>※jQuery使えよとか言わないで下さい＞＜</p>
+    </div>
+    <div class="section separate">
+        <h2>作ったものは後で使える</h2>
+        <p>学習の課題で作ったスクリプトを後で使うことってそんなに無いですよね・・・</p>
+        <p>でもGreasemonkeyで書いたスクリプトは後でも使える！</p>
+        <p>なんたって既存サイトを便利にするのが目的なのだから！</p>
+        <p>テンション上がってきますね！</p>
+    </div>
+    <div class="section separate">
+        <h2>公開すれば誰かを幸せに出来る</h2>
+        <p>便利さのお裾分け、してみませんか。</p>
+        <p>僕も適当に公開しています。</p>
+        <dl>
+        	<dt>アメーバの『ペタ』を手軽に付けられるGreasemonkey</dt>
+        	<dd><a href="http://rewish.org/javascript/gm_ameba_petalink">http://rewish.org/javascript/gm_ameba_petalink</a></dd>
+        </dl>
+        <p>3クリック必要なところを1クリックにするスクリプト。</p>
+        <p>僕は使ってないですけどね！</p>
+    </div>
+    <div class="section">
+        <h2>最後に</h2>
+        <p>同じような理由で、Firebugのコンソール(ブックマークレット)やStylish(ユーザーCSS)などもオススメです。</p>
+        <dl>
+        	<dt>Firebug :: Add-ons for Firefox</dt>
+        	<dd><a href="https://addons.mozilla.org/ja/firefox/addon/1843">https://addons.mozilla.org/ja/firefox/addon/1843</a></dd>
+        	<dt>Stylish :: Add-ons for Firefox</dt>
+        	<dd><a href="https://addons.mozilla.org/ja/firefox/addon/2108">https://addons.mozilla.org/ja/firefox/addon/2108</a></dd>
+        </dl>
+    </div>
+    <div class="section cover">
+        <h2>終り</h2>
+        <p>ご清聴ありがとうございました</p>
+        <p class="image"><img src="mukimuki.png" alt ="mukimuki" title="mukimuki" width="125" height="125" /></p>
+    </div>
+</div>
+<address>Copyright &copy; <a href="http://yusukenakanishi.com/">Yusuke Nakanishi</a>.</address> 
+</body>
+</html>

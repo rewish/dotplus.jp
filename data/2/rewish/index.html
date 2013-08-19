@@ -1,0 +1,253 @@
+<!DOCTYPE html> 
+<html>
+<head> 
+	<meta charset="UTF-8"> 
+	<title>jQueryっぽい雰囲気が出る応用 - rewish</title>
+	<link rel="stylesheet" type="text/css" href="prettify/prettify.css">
+	<link rel="stylesheet" type="text/css" href="nerine/nerine.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body> 
+
+<article> 
+
+<section class="title">
+	<h1>jQueryを使った簡単な実装例</h1>
+	<p>@<a href="//twitter.com/rewish">rewish</a></p>
+</section>
+
+<section>
+	<h2>目次</h2>
+	<p>本日は以下の内容をザックリと紹介します！</p>
+	<ul>
+		<li>応用1) ロールオーバー</li>
+		<li>応用2) スムーススクロール</li>
+		<li>お・ま・け</li>
+	</ul>
+</section>
+
+<section>
+	<h2>応用1) ロールオーバー</h2>
+	<p effect="fade">JSでロールオーバーを実装する場合のオレオレ要件。</p>
+	<ul>
+		<li effect="fade"><strong>HTMLを必要以上に汚さない</strong></li>
+		<li effect="fade"><strong>導入は出来るだけ簡単に</strong></li>
+		<li effect="fade"><strong>ロールオーバー画像のプリロード(先読み)</strong></li>
+	</ul>
+	<p effect="fade">つまり・・・</p>
+	<p effect="fade">HTMLではロールオーバー前の画像を指定するだけにして、</p>
+	<p effect="fade">ロールオーバーはファイル名の末尾に<strong>_on</strong>を付けてsrc属性を書き換えて、</p>
+	<p effect="fade">既に<strong>_on</strong>が付いていたらロールオーバーしないようにして、</p>
+	<div effect="fade">
+<pre class="prettyprint">
+&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;page1&quot;&gt;&lt;img src=&quot;<span class="delayMark" title="アクティブ"><span class="arrow">images/page1_on.png</span></span>&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;page2&quot;&gt;&lt;img src=&quot;images/page2.png&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;page3&quot;&gt;&lt;img src=&quot;images/page3.png&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+</pre>
+	</div>
+	<p effect="fade">あとはプリロード機能を付ければ要件は満たせそう。</p>
+</section>
+
+<section>
+	<h2>応用1) ロールオーバー</h2>
+		<p>こんな感じになりました。</p>
+<pre class="prettyprint">
+jQuery(function($) {
+    <span effect="delayMark" title="ファイル名の末尾に付ける文字列"><span class="arrow">var suffix = '_on';</span></span>
+    <span effect="delayMark" title="ロールオーバーするimg要素を順番にいじくり回す"><span class="arrow">$('nav a img').each(function() {</span></span>
+        <span effect="delayMark" title="対象のimg要素を変数に入れる"><span class="arrow">var img  = $(this);</span></span>
+        <span effect="delayMark" title="img要素のsrc属性を取得"><span class="arrow">var src  = img.attr('src');</span></span>
+        <span effect="delayMark" title="拡張子を除くファイル名を取得"><span class="arrow">var name = src.substr(0, src.lastIndexOf('.'));</span></span>
+        <span effect="delayMark" title="ファイルの拡張子を取得"><span class="arrow">var ext  = src.substring(src.lastIndexOf('.'));</span></span>
+        <span effect="delayMark" title="既にsuffixが付いていたらロールオーバーしない"><span class="arrow">if (name.match(suffix + '$')) return;</span></span>
+        <span effect="delayMark" title="「ファイル名 + suffix + 拡張子」
+を繋いだロールオーバー画像のファイル名を変数に入れる"><span class="arrow">var src_on = name + suffix + ext;</span></span>
+        <span effect="delayMark" title="ロールオーバー画像をプリロード(先読み)しておく"><span class="arrow">$('&lt;img&gt;').attr('src', src_on);</span></span>
+        <span effect="delayMark" title="img要素にhoverイベントをセットする"><span class="arrow">img.hover(</span></span>
+            <span effect="delayMark" title="マウスポインタが乗っかった時:
+src属性をロールオーバー画像に切り替える"><span class="arrow">function() { img.attr('src', src_on); }</span></span>,
+            <span effect="delayMark" title="マウスポインタが何処か他の場所へ行った時:
+src属性を元の画像に切り替える"><span class="arrow">function() { img.attr('src', src); }</span></span>
+        );
+    });
+});
+</pre>
+</section>
+
+<section>
+	<h2>応用1) ロールオーバー</h2>
+	<p>やったー！できたー！</p>
+	<p id="rolloverDemo">
+		<img src="img/r.png">
+		<img src="img/r_on.png">
+	</p>
+	<p effect="fade">ちなみにプリロード機能が無いと・・・</p>
+	<div effect="fade">
+		<p id="rolloverDemo2"><img src="img/r.png" width="200" height="60"></p>
+		<p>回線状況よっては、初回ロールオーバー時に遅延が発生します。</p>
+	</div>
+	<p effect="fade">今回のコードはプラグイン化していませんが、プラグイン化することでもっと使い易くなるはずです！</p>
+</section>
+
+<section>
+	<h2>応用2) スムーススクロール</h2>
+	<p effect="fade">まずは、<a href="file:///Users/rewish/Projects/jdtplugins/jdtscroll/example.html">スムーススクロールの例</a>を見てみましょう。</p>
+	<p effect="fade">こんな感じのスルッスルのスクロールを、jQueryなら超簡単に実装できます。</p>
+	<div effect="fade">
+<pre class="prettyprint">
+jQuery(function($) {
+    <span effect="delayMark" title="hrefが#で始まるa要素を取得して
+clickイベントをセットする"><span class="arrow">$('a[href^=&quot;#&quot;]').click(function() {</span></span>
+        <span effect="delayMark" title="スクロール先の対象要素を取得
+(this.hashには#hogehogeな文字列が入っている)"><span class="arrow">var target = $(this.hash);</span></span>
+        <span effect="delayMark" title="対象要素の位置(スクロール位置)を取得"><span class="arrow">var top = target.offset().top;</span></span>
+        <span effect="delayMark" title="1秒かけてスクロールするアニメーション"><span class="arrow">$('html, body').animate({scrollTop: top}, 1000);</span></span>
+        <span effect="delayMark" title="a要素が本来持つclickイベントを無効にする"><span class="arrow">return false;</span></span>
+    });
+});
+</pre>
+	</div>
+	<p effect="fade">すごく簡単ですね！さすがjQuery！</p>
+	<p effect="fade">※このままだとOperaで動かないかも知れないよ！詳細はググってね！</p>
+</section>
+
+<section>
+	<h2>お・ま・け</h2>
+	<h3 effect="fade"><strong>delayメソッド</strong>と<strong>dequeueメソッド</strong>のそれっぽい使い方</h3>
+	<p effect="fade"><strong>delayメソッド</strong>とは、キューを指定秒数遅らせる・・・</p>
+	<p effect="fade">ザックリ言うと、<strong>直後に指定されたアニメーションの実行を指定秒数遅らせるメソッド</strong>です。</p>
+	<div effect="fade">
+<pre class="prettyprint">
+jQuery(function() {
+    $('#message')
+        <span effect="delayMark" title="2秒待って"><span class="arrow">.delay(2000)</span></span>
+        <span effect="delayMark" title="徐々に高さを無くす"><span class="arrow">.slideUp()</span></span>;
+});
+</pre>
+		<div effect="fade">
+			<p><button id="delayRun">実行</button></p>
+			<p id="delayMessage" class="message">ログインしました！のようなメッセージ</p>
+		</div>
+	</div>
+</section>
+
+<section>
+	<h2>お・ま・け</h2>
+	<p><strong>dequeueメソッド</strong>とは、実行中のキューを中断して・・・</p>
+	<p effect="fade">ザックリ言うと、<strong>実行中のアニメーションやdelayを中断して、次のアニメーションを実行するメソッド</strong>です。</p>
+	<p effect="fade">指定秒数待たずにメッセージを消したい場合に、dequeueメソッドを使うとそれっぽくなります。</p>
+	<div effect="fade">
+<pre class="prettyprint">
+jQuery(function() {
+    $('#message')
+        .delay(2000)
+        .slideUp()
+        <span effect="delayMark" title="クリックすると即座に消える処理を追加"><span class="arrow">.click(function() { $(this).dequeue(); })</span></span>;
+});
+</pre>
+		<div effect="fade">
+			<p><button id="dequeueRun">実行</button></p>
+			<p id="dequeueMessage" class="message">ログインしました！のようなメッセージ</p>
+		</div>
+	</div>
+	<p effect="fade">なんとなくそれっぽい感じがしますね。します。</p>
+	<p effect="fade">色々応用すると面白いことが出来るかも知れません。</p>
+</section>
+
+<section class="last">
+	<p>Thank you!</p>
+</section>
+
+</article>
+
+<script type="text/javascript" src="prettify/prettify.js"></script> 
+<script type="text/javascript" src="nerine/jquery.js"></script> 
+<script type="text/javascript" src="nerine/nerine.js"></script> 
+<script type="text/javascript">
+$('a[href^="http://"], a[href^="file://"]').each(function() {
+	$(this).attr('target', '_blank');
+})
+
+prettyPrint();
+
+Nerine.lines = 40;
+Nerine.aspects = [[4,3], [16,9]];
+Nerine.initialize();
+
+var suffix = '_on';
+$('#rolloverDemo img').each(function() {
+	var img  = $(this);
+	var src  = img.attr('src');
+	var name = src.substr(0, src.lastIndexOf('.'));
+	var ext  = src.substring(src.lastIndexOf('.'));
+	if (name.match(suffix + '$')) return;
+	var src_on = name + suffix + ext;
+	$('<img>').attr('src', src_on);
+	img.hover(
+		function() { img.attr('src', src_on); },
+		function() { img.attr('src', src); }
+	);
+});
+
+$('#rolloverDemo2 img').each(function() {
+	var img  = $(this);
+	var src  = img.attr('src');
+	var name = src.substr(0, src.lastIndexOf('.'));
+	var ext  = src.substring(src.lastIndexOf('.'));
+	if (name.match(suffix + '$')) return;
+	var src_on = name + suffix + ext;
+	$('<img>').attr('src', src_on);
+	var queue;
+	img.hover(
+		function() {
+			queue = setTimeout(function() {
+				img.attr('src', src_on);
+			}, 500)
+		},
+		function() {
+			clearTimeout(queue);
+			img.attr('src', src);
+		}
+	);
+});
+
+$('#delayRun').click(function() {
+	var sec = 2;
+	var time = $('<span/>', {
+		text: 'あと '+ sec +' 秒',
+		css: {marginLeft: '10px'}
+	})
+	$(this).after(time);
+	setTimeout(function() {
+		time.text('あと '+ (--sec) +' 秒');
+		if (sec > 0) setTimeout(arguments.callee, 1000);
+	}, 1000);
+	$('#delayMessage').show().delay(2000).slideUp('normal', function() {
+		time.remove();
+	});
+})
+
+$('#dequeueRun').click(function() {
+	var sec = 2;
+	var time = $('<span/>', {
+		text: 'あと '+ sec +' 秒 (クリックしてみてね！)',
+		css: {marginLeft: '10px'}
+	})
+	$(this).after(time);
+	setTimeout(function() {
+		time.text('あと '+ (--sec) +' 秒 (クリックしてみてね！)');
+		if (sec > 0) setTimeout(arguments.callee, 1000);
+	}, 1000);
+	$('#dequeueMessage').show().delay(2000).slideUp('normal', function() {
+		time.remove();
+	}).click(function() {
+		$(this).dequeue();
+	});
+})
+</script>
+</body>
+</html>

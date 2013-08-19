@@ -1,0 +1,191 @@
+@charset "UTF-8";
+
+/* ==================================================================== *
+ * @filename      init.css
+ * @description   スタイルの初期設定
+ *
+ * @version       $Revision: 2 $
+ * @modifiedby    $LastChangedBy: rewish $
+ * @lastmodified  $Date: 2010-04-06 11:37:02 +0900 (火, 06  4月 2010) $
+ * ==================================================================== */
+
+/* ---------------------------------------------------- *
+ *  Reset Everything
+ * ---------------------------------------------------- */
+body, div, p, blockquote, table, th, td, embed, object,
+fieldset, form, input, textarea, select, option, pre,
+dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6 {
+	margin		: 0;
+	padding		: 0;
+	vertical-align	: baseline;
+}
+
+/* ---------------------------------------------------- *
+ *  Structure Module
+ * ---------------------------------------------------- */
+html {
+	overflow-y	: scroll;
+}
+
+body {
+	position	: relative;
+	background	: #FFF;
+	color		: #333;
+	font-size	: 13px;
+	*font-size	: small;
+	*font		: x-small;
+	font-family	:
+		'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro',
+		'Trebuchet MS', Arial, 'ＭＳ Ｐゴシック', sans-serif;
+	line-height	: 1.6;
+	letter-spacing	: 1px;
+}
+
+/* ---------------------------------------------------- *
+ *  Text Module
+ * ---------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+	font-size	: 100%;
+	font-weight	: bold;
+}
+
+address {
+	font-style	: normal;
+}
+
+strong {
+	font-weight	: bold;
+}
+
+em {
+	font-style	: italic;
+}
+
+del {
+	text-decoration	: line-through;
+}
+
+ins {
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content		: "";
+}
+
+blockquote, q {
+	quotes		: "" "";
+}
+
+pre {
+	font-family	: monospace;
+	*font-size	: 108%;
+	line-height	: 100%;
+}
+
+small {
+	font-size	: 100%;
+}
+
+/* ---------------------------------------------------- *
+ *  Hypertext Module
+ * ---------------------------------------------------- */
+a:link {
+	color		: #3663B6;
+	text-decoration : none;
+}
+
+a:visited {
+	color		: #7536B6;
+	text-decoration : none;
+}
+
+a:hover {
+	text-decoration : underline;
+}
+
+a:active {
+	text-decoration : none;
+}
+
+a:active,
+a:focus {
+	outline		: none;
+}
+
+/* ---------------------------------------------------- *
+ *  List Module
+ * ---------------------------------------------------- */
+ul {
+	list-style	: none;
+}
+
+ol {
+	list-style	: decimal;
+}
+
+/* ---------------------------------------------------- *
+ *  Presentation Module                                 *
+ * ---------------------------------------------------- */
+hr {
+ 	display		: none;
+}
+
+/* ---------------------------------------------------- *
+ *  Forms Module
+ * ---------------------------------------------------- */
+select, input, button, textarea {
+	font-size	: 99%;
+	font-family	:
+		'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro',
+		'Trebuchet MS', Arial, 'ＭＳ Ｐゴシック', sans-serif;
+}
+
+textarea {
+	overflow	: auto;
+}
+
+fieldset {
+	border		: 0;
+}
+
+legend {
+	display		: none;
+}
+
+/* ---------------------------------------------------- *
+ *  Table Module
+ * ---------------------------------------------------- */
+table {
+	border-collapse	: collapse;
+	border-spacing	: 0;
+	font-size	: inherit;
+	font		: 100%;
+}
+
+th {
+	font-weight	: bold;
+	text-align	: left;
+}
+
+/* ---------------------------------------------------- *
+ *  Image Module
+ * ---------------------------------------------------- */
+img {
+	border		: 0;
+	vertical-align	: bottom;
+}
+
+/* ---------------------------------------------------- *
+ *  HTML5 Elements
+ * ---------------------------------------------------- */
+header,
+footer,
+section,
+article,
+aside,
+nav {
+	display		: block;
+}
+
+/* ----- End Of File ----- */

@@ -1,0 +1,106 @@
+@import url('../nerine/petals/common-effect.petal.css');
+
+body {
+	background-color: #000;
+	color: #FFF;
+	font-family	:
+		'ÉqÉâÉMÉmäpÉS Pro W3', 'Hiragino Kaku Gothic Pro', osaka,
+		'ÉÅÉCÉäÉI', Meiryo, verdana, 'ÇlÇr ÇoÉSÉVÉbÉN', sans-serif;
+	letter-spacing	: 1px;
+	line-height: 1.6;
+}
+
+a {
+	color: #36F;
+}
+
+strong {
+	color: #F39800;
+}
+
+pre {
+	-webkit-border-radius: 7px;
+	font-family: Monaco, 'ÉqÉâÉMÉmäpÉS Pro W3', 'Hiragino Kaku Gothic Pro', 'VL ÉSÉVÉbÉN', 'VL Gothic', sans-serif !important;
+	font-size: 0.8em;
+}
+
+section {
+	-webkit-border-radius: 10px;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%,
+		from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.05)));
+}
+
+h1 {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin: -1em 0 0 0;
+	padding: 0;
+	width: 100%;
+/*	text-shadow: 0 0 0.3em #fff;*/
+	text-align: center;
+	line-height: 1;
+	color: #8FC31F;
+}
+
+section.title p {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	margin: 1em 0 0 0;
+	text-align: center;
+}
+
+h2 {
+	margin: 10px 0 10px;
+	border-bottom: 1px solid #FFF;
+}
+
+h3 strong {
+	color: #8FC31F;
+}
+
+dt {
+	margin: 0;
+	color: #8FC31F;
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 0 1em 1em;
+}
+
+li {
+	margin-bottom: 5px;
+}
+
+img {
+	border: solid 2px #EFEFEF;
+}
+
+section.last p {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin: -1em 0 0 0;
+	padding: 0;
+	width: 100%;
+	text-align: center;
+	line-height: 1;
+	font-size: 2em;
+}
+
+.message {
+	display: none;
+	padding: 5px 10px;
+	border: 1px solid #FFF;
+	border-radius: 7px;
+	background: #EEE;
+	color: #333;
+	font-size: 0.8em;
+}
+
+button {
+	padding: 5px 20px;
+}

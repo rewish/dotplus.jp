@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Language" content="ja" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="imagetoolbar" content="no" />
+<title>[.coder]Jetpackをふわっと紹介します</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" media="all" href="./css/default.css" />
+<link rel="stylesheet" type="text/css" media="all" href="./css/base.css" />
+<link rel="stylesheet" type="text/css" media="all" href="./css/custom.css" />
+<script type="text/Javascript" src="./js/lib/jquery.min.js"></script>
+<script type="text/Javascript" src="./js/mukiSlide.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+jQuery(function($){
+    // デフォルトはshow、設定出来るのはfadeIn、slideDown
+    $.mukiSlide({ motion: 'fadeIn' });
+});
+// ]]>
+</script>
+</head>
+<body>
+<div id="title">
+    <h1><img src="img/dotcoder.png" width="40" height="40" alt="" />Jetpackをふわっと紹介します</h1>
+</div>
+<div id="content">
+    <div class="section cover">
+        <h2><img src="img/jetpack_logo.png" alt="" /></h2>
+        <p>JSがまともに書けない<br />
+		HTMLコーダーが<br />
+		Jetpackを<br />
+		ふわっと紹介します</p>
+		<p>Twitter:hiloki(<a href="http:www.inkdesign.jp/">inkdesign</a>)</p>
+    </div>
+    <div class="section separate">
+        <h2>Jetpackはなんぞや</h2>
+        <p><a href="https://jetpack.mozillalabs.com/">https://jetpack.mozillalabs.com/</a><br />
+		HTML/CSS/JavaScriptでFirefoxの拡張機能を<br />開発できるプラットフォーム</p>
+		<p><img src="img/img_jetpack_addon.png" alt="" /></p>
+        <p>JetpackそのものもFirefoxのアドオンとして提供されていて、<br />ブラウザ上で開発ができる</p>
+    </div>
+    <div class="section separate">
+        <h2>Jetpackの開発キットは今２つある<span>（というのを昨日知りました）</span></h2>
+        <dl>
+        	<dt>Jetpack prototype(0.8)</dt>
+        	<dd>今回紹介するブラウザ上でごにょごにょできる方</dd>
+        	<dt>Jetpack SDK(0.1) <span>2010/03/10 リリース</span></dt>
+        	<dd>びっくりするくらい状況が把握できておりません ＼（＾O＾）／</dd>
+        </dl>
+		<p>prototypeの方でできる範囲は限られているけど、本格的に運用環境へと移行してもっと複雑なこともできるようになるみたい<br />
+		（prototypeの開発環境もこのSDKで利用できるように改良していくとのこと）</p>
+    </div>
+    <div class="section">
+        <h2>まぁSDKはさておき</h2>
+		<p><img src="img/img_yaruo.jpg" width="100%" alt="" /></p>
+    </div>
+    <div class="section separate">
+        <h2>prototypeでのお話</h2>
+		<p>アドオンとしてJetpackをインストール後、<br />
+		about:jetpack を叩けば
+		開発ページへと移動。</p>
+    </div>
+    <div class="section">
+        <h2>/* ここから実際のデモ */</h2>
+		<p class="huge">デモ</p>
+    </div>
+    <div class="section separate">
+        <h2>んで作ったのはどう使うのか（配布方法）</h2>
+        <p>下記のように、&lt;link rel="jetpack" href="xxx.js"/&gt;なHTMLを用意する</p>
+        <pre><code>&lt;html>
+	&lt;head&gt;
+		&lt;title&gt;My First Jetpack&lt;/title&gt;
+		&lt;link rel="jetpack" href="my-first-jetpack.js"/&gt;
+	&lt;/head&gt;
+	&lt;body&gt;This is my first Jetpack!&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        <p>こうするとJetpack Feature（Jetpackで開発したアドオン）の<br />インストールを促すメッセージが出ます<br />
+		※ユーザーもJetpackのインストールが必要</p>
+    </div>
+    <div class="section separate">
+        <h2>まとめ</h2>
+        <p class="large">Greasemonkeyでええんちゃう？</p>
+        <p>とかいわずに、今後JetpackベースでFirefox拡張機能ができるってことで
+		Jetpackにも触れてみてはどうでしょーか。</p>
+    </div>
+    <div class="section cover">
+        <h2>ご清聴ありがとうございました</h2>
+        <p class="large"><img src="img/img_end.jpg" width="300" alt="" /><br />
+		<span class="tiny">The Rocketeer by <a href="http://dkrall.blogspot.com/">Daniel Krall</a></span></p>
+    </div>
+</div>
+<address>mukiSlide.js &copy; by <a href="http://yusukenakanishi.com/">Yusuke Nakanishi</a>.</address>
+</body>
+</html>

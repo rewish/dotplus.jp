@@ -1,0 +1,231 @@
+@charset "utf-8";
+
+/*============================
+ COMMON
+=============================*/
+html { font-family: "ÉÅÉCÉäÉI","Meiryo",Verdana,Helvetica,"ÇlÇr ÇoÉSÉVÉbÉN","MS P Gothic","ÉqÉâÉMÉmäpÉS Pro W3","Hiragino Kakugo Pro W3",Osaka,sans-serif; }
+body { background: #fff; }
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-size: 95%;
+	font-style: normal;
+	font-weight: normal;
+}
+
+ul,ol {
+	list-style: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+img {
+	border: none;
+}
+
+blockquote {
+	padding: 1em 0 0 1em;
+	background: url(../img/blockquote.gif) no-repeat left top;
+}
+
+body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	font-size: 75%;
+	color: #000;
+	overflow: hidden;
+}
+
+/* Header
+----------------------------------*/
+div#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 1em;
+	width: 100%;
+	background: #000;
+	color: #fff;
+	opacity: 0.6;
+	z-index: 500;
+}
+
+	div#header h1 {
+		font-size: 200%;
+		font-weight: bold;
+	}
+
+/* Contents
+----------------------------------*/
+div#contents {
+	width: 80%;
+	height: 100%;
+	border-right: solid #999 1px;
+	border-left: solid #999 1px;
+}
+
+	div#contents div#index {
+		position: relative;
+		width: 100%;
+	}
+
+		div#contents div#index p.indexTitle {
+			position: absolute;
+			top: 50%;
+			margin: 0 3em;
+			width: 80%;
+			border-bottom: solid #000 2px;
+			font-size: 200%;
+			font-weight: bold;
+		}
+	
+	div#contents div.section {
+		xposition: relative;
+		margin: 0 3em;
+		padding-top: 10em;
+		z-index: 1;
+	}
+	
+		div#contents div.section h2 {
+			font-size: 150%;
+			font-weight: bold;
+		}
+
+		div#contents div.section p {
+			margin-top: 1em;
+		}
+		
+		div#contents div.section img.imgL {
+			float: left;
+			padding: .5em .5em 0 0;
+		}
+		div#contents div.section img.imgR {
+			float: right;
+			padding: 0 0 .5em .5em;
+		}
+
+		div#contents div.section dl {
+			margin-top: 1em;
+		}
+
+			div#contents div.section dl dt {
+				font-weight: bold;
+			}
+
+			div#contents div.section dl dd {
+				margin-left: .5em;
+				padding-left: .5em;
+				border-left: solid #ccc 2px;
+			}
+
+		div#contents div.section dl.selecter {
+		}
+
+			div#contents div.section dl.selecter dt {
+				float: left;
+				width: 10em;
+				font-weight: bold;
+			}
+
+			div#contents div.section dl.selecter dd {
+				margin-left: .5em;
+				padding-left: .5em;
+				border-left: none;
+			}
+		
+		div#contents div.section table {
+			border-top: solid #999 1px;
+			border-left: solid #999 1px;
+			text-align: left;
+		}
+
+			div#contents div.section table th,
+			div#contents div.section table td {
+				padding: .5em;
+				border-right: solid #999 1px;
+				border-bottom: solid #999 1px;
+			}
+
+			div#contents div.section table th {
+				background: #eee;
+			}
+
+		div#contents div.section div.demo {
+			margin-top: 1em;
+			padding: 0 1em 1em 1em;
+			border: solid #ccc 1px;
+			-moz-border-radius: 5px;
+			-webkit-border-top: 5px;
+		}
+
+		div#contents div.section code {
+			display: block;
+			margin-top: 1em;
+			padding: 1em;
+			background: #f7f7f7;
+			-moz-border-radius: 5px;
+			-webkit-border-top: 5px;
+			font-family: "Consolas","Monaco","Bitstream Vera Sans Mono","Courier New",Courier,monospace !important;
+		}
+
+			div#contents div.section code .blue { color: #006699; }
+			div#contents div.section code .green { color: #009900; }
+			
+			div#contents div.section p.thisNumber {
+				position: absolute;
+				right: 0;
+				bottom: 10%;
+				font-size: 800%;
+				font-weight: bold;
+				opacity: 0.1;
+			}
+
+
+/* Side Navigation
+----------------------------------*/
+div#sideNav {
+	position: fixed;
+	top: 20%;
+	left: 82%;
+	padding: 1em;
+	width: 18%;
+}
+
+	div#sideNav p#pageNumber {
+		padding-bottom: 2em;
+		font-size: 120%;
+	}
+
+		div#sideNav p#pageNumber strong {
+			font-size: 160%;
+		}
+
+	div#sideNav ul {
+		padding-bottom: 1em;
+	}
+
+		div#sideNav ul li {
+		}
+
+		div#sideNav ul li.indexTop {
+			font-weight: bold;
+		}
+
+			div#sideNav ul li ul {
+				margin: 1em 0 0 1em;
+			}
+
+				div#sideNav ul li ul li {
+					margin-left: 1em;
+					font-weight: normal;
+					list-style: decimal;
+				}
+
+

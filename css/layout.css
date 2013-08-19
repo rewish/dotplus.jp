@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+/* ==================================================================== *
+ * @filename      layout.css
+ * @description   全体の配置定義
+ *
+ * @version       $Revision: 2 $
+ * @modifiedby    $LastChangedBy: rewish $
+ * @lastmodified  $Date: 2010-04-06 11:37:02 +0900 (火, 06  4月 2010) $
+ * ==================================================================== */
+
+
+body > header {
+	width		: 940px;
+	margin		: 0 auto 20px;
+	padding		: 20px 10px 0;
+}
+
+body > nav {
+	position	: absolute;
+	top			: 65px;
+	left		: 50%;
+	width		: 780px;
+	height		: 50px;
+	margin-left	: -310px;
+}
+
+div.main {
+	width		: 940px;
+	margin		: 0 auto 20px;
+	overflow	: hidden;
+}
+	.central {
+		float		: left;
+		width		: 660px;
+	}
+	aside.sidebar {
+		float		: right;
+		width		: 240px;
+	}
+
+aside.moreInfo {
+	width		: 940px;
+	margin		: 0 auto 20px;
+	padding		: 0 10px;
+	overflow	: hidden;
+}
+	aside.moreInfo > section {
+		margin		: 0 40px 0 0;
+	}
+	#shortAbout {
+		float		: left;
+		width		: 300px;
+	}
+	#hashTags {
+		float		: left;
+		width		: 320px;
+	}
+	#member {
+		float		: left;
+		width		: 200px;
+	}
+
+body > footer {
+	width		: 960px;
+	margin		: 0 auto;
+}
+
+
+/* ----- End Of File ----- */

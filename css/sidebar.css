@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+/* ==================================================================== *
+ * @filename      sidebar.css
+ * @description   サイドバーのスタイル
+ *
+ * @version       $Revision: 2 $
+ * @modifiedby    $LastChangedBy: rewish $
+ * @lastmodified  $Date: 2010-04-06 11:37:02 +0900 (火, 06  4月 2010) $
+ * ==================================================================== */
+
+
+/* ---------------------------------------------------- *
+ *  Sidebar
+ * ---------------------------------------------------- */
+aside.sidebar {
+}
+	aside.sidebar > ul.tabNav {
+		margin		: 0 0 -1px;
+		padding		: 0 0 0 10px;
+		font-size	: 93%;
+		font-weight	: bold;
+		overflow	: hidden;
+	}
+		aside.sidebar > ul.tabNav a {
+			float		: left;
+			display		: inline-block;
+			margin		: 0 5px 0 0;
+			padding		: 5px 10px 4px;
+			border		: 1px solid #DCDDDD;
+			border-radius			: 5px 5px 0 0;
+			-moz-border-radius		: 5px 5px 0 0;
+			-webkit-border-radius	: 5px 5px 0 0;
+			background	: #DDD;
+			color		: #333;
+		}
+		aside.sidebar > ul.tabNav a.current {
+			padding-bottom	: 5px;
+			border-bottom	: 0;
+			background	: #FFF;
+		}
+		aside.sidebar > section ul {
+			padding		: 15px 10px 30px;
+			border-top	: 1px solid #DCDDDD;
+		}
+
+
+/* ---------------------------------------------------- *
+ *  Sidebar > Categories
+ * ---------------------------------------------------- */
+#categories {
+}
+
+
+/* ---------------------------------------------------- *
+ *  Sidebar > Tags
+ * ---------------------------------------------------- */
+#tags ul {
+	overflow	: hidden;
+}
+	#tags li {
+		display		: inline;
+	}
+		#tags li a {
+			display		: block;
+			float		: left;
+			margin		: 0 3px 3px 0;
+			padding		: 3px 8px;
+			border-radius			: 3px;
+			-moz-border-radius		: 3px;
+			-webkit-border-radius	: 3px;
+			background	: #7D7D7D;
+			color		: #FFF;
+			font-size	: 86%;
+		}
+
+
+/* ---------------------------------------------------- *
+ *  Sidebar > Archives
+ * ---------------------------------------------------- */
+#archives ul {
+	overflow	: hidden;
+}
+	#archives li {
+		float		: left;
+		width		: 110px;
+	}
+
+
+/* ---------------------------------------------------- *
+ *  Sidebar > Recent Entries
+ * ---------------------------------------------------- */
+#recentEntries li {
+	margin		: 0 0 5px;
+	padding		: 0 0 5px;
+	border-bottom	: 1px solid #DDD;
+}
+
+
+/* ---------------------------------------------------- *
+ *  Sidebar > Others
+ * ---------------------------------------------------- */
+aside.sidebar > ul.others {
+	padding		: 0 10px;
+	font-size	: 85%;
+}
+	aside.sidebar > ul.others li {
+		margin		: 0 0 5px;
+	}
+		aside.sidebar > ul.others a {
+			padding		: 0 0 0 18px;
+		}
+		aside.sidebar > ul.others a[href*="twitter.com"] {
+			background	: url('../img/icon/twitter.png') 0 50% no-repeat;
+		}
+		aside.sidebar > ul.others a[href*="feed"] {
+			background	: url('../img/icon/feed.png') 0 50% no-repeat;
+		}
+
+
+/* ---------------------------------------------------- *
+ *  Sidebar > Others
+ * ---------------------------------------------------- */
+#links {
+	margin		: 30px 0 0;
+	padding		: 0 10px;
+}
+
+
+
+/* ----- End Of File ----- */

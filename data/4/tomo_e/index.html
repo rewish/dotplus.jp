@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Language" content="ja" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="imagetoolbar" content="no" />
+<title>みんなで使おう！Fireworks！ 〜Fireworksで画像最適化〜</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" media="all" href="./css/default.css" />
+<link rel="stylesheet" type="text/css" media="all" href="./css/base.css" />
+<script type="text/Javascript" src="./js/lib/jquery.min.js"></script>
+<script type="text/Javascript" src="./js/mukiSlide.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+jQuery(function($){
+    // デフォルトはshow、設定出来るのはfadeIn、slideDown
+    $.mukiSlide({ motion: 'fadeIn' });
+});
+// ]]>
+</script>
+</head>
+<body>
+<div id="titleOuter">
+ <div id="title">
+    <h1><img src="img/fireworks-logo.jpg" width="30px" height="30px" alt="" /> みんなで使おう！Fireworks！</h1>
+ </div>
+</div>
+<div id="content">
+    <div class="section cover">
+        <h2>みんなで使おう！Fireworks！</h2>
+        <p>〜Fireworksで画像最適化〜</p>
+        <p><img src="img/index.png" alt="" /></p>
+    </div>
+
+    <div class="section separate">
+        <h2>自己紹介</h2>
+        <p>株式会社EC studio でHTMLコーダーやってます、赤堀巴絵です。</p>
+        <p>EC studio デザインブログでコーダー向けネタやパフォーマンスアップネタを投稿してます。</p>
+        <p><img src="img/karin_bigger.jpg" style="vertical-align: top;" width="200px" height="100px" alt="" />Twitterは「tomo_e」でやってるのでよかったらフォローよろしくお願いします！</p>
+        <p>最近は趣味でイラストを描いたりもしてます。
+        <img src="img/myprofile.jpg" style="vertical-align: top;" width="420px" height="206px" alt="" /></p>
+    </div>
+
+    <div class="section">
+        <h2>目次</h2>
+        <ul>
+         <li>FireworksとPhotoshopのPNG比較</li>
+         <li>png8アルファチャンネルでさらに軽量化！</li>
+         <li>FireworksとPhotoshopのJPEG比較</li>
+         <li>JPEGマスクで見せたい部分をキレイに！</li>
+         <li>まとめ</li>
+        </ul>
+    </div>
+
+    <div class="section separate">
+        <h2>FireworksとPhotoshopのPNG比較</h2>
+        <p>実はPNGで同じ画像を書き出すならFireworksのほうが画像を軽く書き出せます。<br />
+        チャンクという画像情報以外のその他の情報がPhotoshopのほうが多いからです。</p>
+        <p>実際、FireworksとPhotoshopのPNG8で書き出した画像を比べてみましょう。</p>
+        <ul class="slideImage clearfix">
+          <li>
+           <dl class="center">
+            <dd><img src="img/01fireworks.png" width="200" height="150" alt="" /></dd>
+            <dt>Fireworks PNG<br />1.26KB</dt>
+           </dl>
+          </li>
+          <li>
+           <dl class="center">
+            <dd><img src="img/01photoshop.png" width="200" height="150" alt="" /></dd>
+            <dt>Photoshop PNG<br />2.22KB</dt>
+           </dl>
+          </li>
+        </ul>
+        <p>Fireworksで書き出したPNGの方が0.96KB軽いことがわかります。</p>
+    </div>
+    <div class="section separate">
+        <h2>さらにツールでPNGを最適化しよう！</h2>
+        <p>ツールで不要な情報を削除した画像を比較してみようと思います。<br />
+        今回使用したツールはpunypngというブラウザ上でチャンク情報を削除してくれるWebツールです。</p>
+        <ul class="slideImage clearfix">
+          <li>
+           <dl class="center">
+            <dd><img src="img/01fireworks-puny.png" width="200" height="150" alt="" /></dd>
+            <dt>Fireworks PNG<br />0.926KB</dt>
+           </dl>
+          </li>
+          <li>
+           <dl class="center">
+            <dd><img src="img/01photoshop-puny.png" width="200" height="150" alt="" /></dd>
+            <dt>Photoshop PNG<br />2.22KB</dt>
+           </dl>
+          </li>
+        </ul>
+        <p>Fireworks PNGでは29%ツールで圧縮することができたのですが、<br />
+        Photoshop PNGでは1%しか圧縮できなかったのでサイズに変化がみられませんでした。</p>
+    </div>
+    <div class="section separate">
+        <h2>Photoshop PNGを軽量化する方法</h2>
+        <p>PNGを書き出すのはFireworksの方が便利なことはわかりましたが、<br />
+        Photoshop PNGでもさらにチャンク情報を削除する方法があります。</p>
+        <p>その方法はPhotoshopで書き出したPNGをFireworksで書き出し直すことです。</p>
+        <ul class="slideImage clearfix">
+          <li>
+           <dl class="center">
+            <dd><img src="img/01photoshop-fireworks.png" width="200" height="150" alt="" /></dd>
+            <dt>Fireworks PNG<br /><span class="small">元Photoshop PNG</span><br />1.51KB</dt>
+           </dl>
+          </li>
+          <li>
+           <dl class="center">
+            <dd><img src="img/01photoshop.png" width="200" height="150" alt="" /></dd>
+            <dt>Photoshop PNG<br />2.22KB</dt>
+           </dl>
+          </li>
+        </ul>
+        <p>こうすればチャンク情報を削除することができますが、<br />
+        かなり面倒な作業になるので最初からFireworksでデータを作成することをオススメします。
+        </p>
+    </div>
+    <div class="section separate">
+        <h2>PNG8アルファチャンネルでさらに軽量化！</h2>
+        <p>透過画像は通常ならPNG32で書き出しますが、<br />
+        色数が少ない場合（256色以内）はPNG8アルファチャンネルを使うと画像を軽量化できます。
+        </p>
+        <ul class="slideImage clearfix">
+          <li>
+           <dl class="center">
+            <dd><img src="img/02png-light8.png" width="211" height="219" alt="" /></dd>
+            <dt>PNG8<br />アルファチャンネル<br />4.18KB</dt>
+           </dl>
+          </li>
+          <li>
+           <dl class="center">
+            <dd><img src="img/02png-light32.png" width="211" height="219" alt="" /></dd>
+            <dt>PNG32<br />アルファチャンネル<br />9.79KB</dt>
+           </dl>
+          </li>
+        </ul>
+        <p>ただし、IE6は透過情報を表現してくれないので、AlphaImageLoaderやjavascriptで対応が必要です。</p>
+    </div>
+    <div class="section separate">
+        <h2>FireworksとPhotoshopのJPEG比較</h2>
+        <p>JPEGの画質80をFireworksとPhotoshopで書き出して比較してみましょう。</p>
+        <ul class="slideImage clearfix">
+          <li>
+           <dl class="center">
+            <dd><img src="img/04jpeg-fireworks.jpg" width="250" height="188" alt="" /></dd>
+            <dt>Fireworks JPEG<br />17.4KB</dt>
+           </dl>
+          </li>
+          <li>
+           <dl class="center">
+            <dd><img src="img/04jpeg-photoshop.jpg" width="250" height="188" alt="" /></dd>
+            <dt>Photoshop JPEG<br />34.3KB</dt>
+           </dl>
+          </li>
+        </ul>
+        <p>FireworksとPhotoshopではデフォルトの圧縮率がFireworksのほうが圧縮率が高いです。<br />
+        しかし、画質はPhotoshopよりも劣化するのであまり大きくないサイズで使用するのがオススメです。<br />
+        パフォーマンスを意識するならJPEGもFireworksで書き出した方が軽量化できます。
+        </p>
+    </div>
+
+    <div class="section separate">
+        <h2>JPEGマスクで見せたい部分をキレイに！</h2>
+        <p>キレイに表示させたい部分とそうでない部分の圧縮率を変えて書き出しすることができます。<br />
+        画像内のテキストなどに使うとキレイに画像を見せることができます。</p>
+        <p><img src="img/03jpegmask-method.jpg" width="600" height="399" alt="" /></p>
+        <p>こんな感じでキレイに表示したい部分にマスクをかけることができます。</p>
+    </div>
+
+    <div class="section separate">
+        <h2>JPEGマスクで書き出してみよう</h2>
+        <p>今回はマスクがかかってるのがわかりやすいように、マスク以外を画質30で書き出してみます。</p>
+        <p><img src="img/03jpegmask-optimize30.jpg" width="600" height="399" alt="" /></p>
+        <p>このようにテキストの部分とその他の部分の画質を変えて書き出すことが出来ます。<br />
+        キレイに見せたい部分を画質で調節することで、さらに軽量化をおこなうことができます。
+        </p>
+    </div>
+
+    <div class="section separate">
+        <h2>まとめ</h2>
+        <p>Fireworksはパフォーマンスアップするにはとても使いやすいアプリケーションです。</p>
+        <p>でも！</p>
+        <p>
+        <span class="big">キレイな画像を使いたい場合はPhotoshopには劣るので、<br />
+        両方をうまく使い分けてユーザーに優しいウェブサイトを作っていきましょう！</span>
+        </p>
+    </div>
+
+    <div class="section cover">
+        <h2>ご清聴ありがとうございました</h2>
+        <p class="small">Special thanks! mukiSlide is made by <a href="http://yusukenakanishi.com/">Yusuke Nakanishi</a></p>
+        <p><img src="img/mofumofu.gif" width="280px" height="300px" alt="" /></p>
+    </div>
+</div>
+<address>Copyright &copy; <a href="http://twitter.com/tomo_e">tomo_e</a>.</address>
+</body>
+</html>

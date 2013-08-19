@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>{% if page.title %}{{ page.title }} :: {% endif %}{{ site.title }}</title>
+  <meta name="author" content="オレ">
+  <meta name="description" content="{{ page.description }}">
+  <link rel="stylesheet" href="/css/import.css">
+</head>
+<body id="pageTop">
+
+<header>
+  <h1><a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/img/dotplus_logo.gif" alt="{{ site.title }}" width="95" height="82"></a></h1>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="{{ site.baseurl }}/about.html">About</a>Hello, World!</li>
+    <li><a href="//twitter.com/{{ site.twitter }}">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="main">
+
+  <div class="central">
+    {{ content }}
+  </div>
+
+  {% include sidebar.html %}
+</div>
+
+<aside class="moreInfo">
+  <section id="shortAbout">
+    <h2>About</h2>
+    <p>.+（ドットプラス）は大阪のWeb関係者向けの勉強会です。</p>
+    <p>「超真面目」にやるつもりはありません。「ゆるく楽しく」学んでいけたらいいと思います。扱う内容も、HTML/CSS/JavaScriptからUI、UX、IA、git、URL設計、パフォーマンス、ユーザビリティ、アクセシビリティまでなんでも。</p>
+    <p class="readMore"><a href="{{ site.baseurl }}/about.html">Read more &gt;&gt;</a></p>
+  </section>
+  <section id="hashTags">
+    <h2>Hash tags</h2>
+    <ol>
+      <li><p>-</p></li>
+    </ol>
+  </section>
+  <section id="member">
+    <h2>Member</h2>
+    <ul>
+      <li><a href="//twitter.com/5509">nori</a></li>
+      <li><a href="//twitter.com/rewish">rewish</a></li>
+      <li><a href="//twitter.com/hogenishi">hogenishi</a></li>
+      <li><a href="//twitter.com/hiloki">hiloki</a></li>
+    </ul>
+  </section>
+</aside>
+
+<footer>
+  <div class="copyright"><small>Copyright &copy; 2010-2012 .+ [dotplus] All Rights Reserved.</small></div>
+</footer>
+
+<script src="{{ site.baseurl }}/js/jquery-1.4.2.min.js"></script>
+<script src="{{ site.baseurl }}/js/plugin.js"></script>
+<script src="{{ site.baseurl }}/js/config.js"></script>
+<script>
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  try {
+    var pageTracker = _gat._getTracker("UA-13244534-1");
+    pageTracker._trackPageview();
+  } catch(err) {}
+</script>
+</body>
+</html>

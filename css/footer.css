@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+/* ==================================================================== *
+ * @filename      footer.css
+ * @description   ページ下部のスタイル
+ *
+ * @version       $Revision: 2 $
+ * @lastmodified  $Date: 2010-04-06 11:37:02 +0900 (火, 06  4月 2010) $
+ * ==================================================================== */
+
+
+/* ---------------------------------------------------- *
+ *  More info
+ * ---------------------------------------------------- */
+aside.moreInfo {
+	padding-top	: 20px;
+	border-top	: 1px solid #DCDDDD;
+}
+
+aside.moreInfo h2 {
+	margin		: 0 0 10px;
+	font-size	: 116%;
+}
+
+
+/* ---------------------------------------------------- *
+ *  More info > About
+ * ---------------------------------------------------- */
+#shortAbout {
+}
+	#shortAbout p.readMore {
+		margin		: 10px 0 0;
+	}
+
+
+/* ---------------------------------------------------- *
+ *  More info > Hash tags
+ * ---------------------------------------------------- */
+#hashTags ul {
+	font-size	: 86%;
+}
+	#hashTags li {
+		margin		: 0 0 5px;
+		padding		: 10px;
+		list-style	: none;
+		border-radius			: 5px;
+		-moz-border-radius		: 5px;
+		-webkit-border-radius	: 5px;
+		background	: #DDD;
+	}
+		#hashTags li p.via {
+			text-align	: right;
+			font-size	: 86%;
+		}
+
+
+/* ---------------------------------------------------- *
+ *  More info > Member
+ * ---------------------------------------------------- */
+#member {
+}
+
+
+/* ---------------------------------------------------- *
+ *  Footer
+ * ---------------------------------------------------- */
+body > footer {
+	padding		: 20px 0;
+	border-top	: 1px solid #DCDDDD;
+	text-align	: center;
+}
+
+
+/* ----- End Of File ----- */
